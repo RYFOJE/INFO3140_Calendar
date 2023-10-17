@@ -34,13 +34,15 @@ namespace khronos {
 
 
 	/* H:M:S.S to time-of-day [0.0..1.0) */
-
+	constexpr tod_t tod(hour_t hours, minute_t minutes, second_t seconds) {
+		return (seconds + 60 * (minutes + 60 * hours)) / SECONDS_PER_DAY;
+	}
 
 	/**	Convert Time-of-day (TOD) to hours, minutes, seconds.  Civil days run from midnight to midnight.
 		@param tod [in] a time-of-day [0..1)
 		@param hours [out] 0-23
 		@param minutes [out] 0-59
 		@param seconds [out] [0.0..60.0)
-		*/
+	*/
 
 } // end-of-namespace khronos
