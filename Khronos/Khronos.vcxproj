@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gatslib\_include\gats\ConsoleApp.hpp" />
+    <ClInclude Include="..\gatslib\_include\gats\TestApp.hpp" />
+    <ClInclude Include="..\gatslib\_include\gats\win32\ConsoleEnhanced.hpp" />
+    <ClInclude Include="..\gatslib\_include\gats\win32\debug.hpp" />
+    <ClInclude Include="..\gatslib\_include\gats\win32\XError.hpp" />
+    <ClInclude Include="include\khronos.hpp" />
+    <ClInclude Include="include\khronos\calendar.hpp" />
+    <ClInclude Include="include\khronos\def.hpp" />
+    <ClInclude Include="include\khronos\gregorian_calendar.hpp" />
+    <ClInclude Include="include\khronos\hebrew_calendar.hpp" />
+    <ClInclude Include="include\khronos\islamic_calendar.hpp" />
+    <ClInclude Include="include\khronos\julian_calendar.hpp" />
+    <ClInclude Include="include\khronos\julian_day.hpp" />
+    <ClInclude Include="include\khronos\timeofday.hpp" />
+    <ClInclude Include="include\khronos\utility.hpp" />
+    <ClInclude Include="include\khronos\vulcan_calendar.hpp" />
+    <ClInclude Include="ut\ut_Khronos.hpp" />
+    <ClInclude Include="ut\ut_utilities.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\gatslib\_src\ConsoleApp.cpp" />
+    <ClCompile Include="..\gatslib\_src\TestApp.cpp" />
+    <ClCompile Include="..\gatslib\_src\TestApp_execute.cpp" />
+    <ClCompile Include="..\gatslib\_src\win32\ConsoleCore.cpp" />
+    <ClCompile Include="..\gatslib\_src\win32\ConsoleEnhanced.cpp" />
+    <ClCompile Include="..\gatslib\_src\win32\XError.cpp" />
+    <ClCompile Include="libsrc\gregorian.cpp" />
+    <ClCompile Include="libsrc\gregorian_to_jd.cpp" />
+    <ClCompile Include="libsrc\hebrew.cpp" />
+    <ClCompile Include="libsrc\hebrew_to_jd.cpp" />
+    <ClCompile Include="libsrc\islamic.cpp" />
+    <ClCompile Include="libsrc\islamic_to_jd.cpp" />
+    <ClCompile Include="libsrc\jd.cpp" />
+    <ClCompile Include="libsrc\jd_to_gregorian.cpp" />
+    <ClCompile Include="libsrc\julian.cpp" />
+    <ClCompile Include="libsrc\julian_to_jd.cpp" />
+    <ClCompile Include="libsrc\vulcan.cpp" />
+    <ClCompile Include="ut\ut_Khronos_001-003_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_004-006_gregorian_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_007-008_gregorian_to_jd.cpp" />
+    <ClCompile Include="ut\ut_Khronos_009_jd_to_gregorian.cpp" />
+    <ClCompile Include="ut\ut_Khronos_011-020_jd_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_021-038_gregorian_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_039_day_of_the_week.cpp" />
+    <ClCompile Include="ut\ut_khronos_040-042_julian_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_043-045_julian_conv.cpp" />
+    <ClCompile Include="ut\ut_Khronos_046-063_julian_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_064-69_mixed_classes.cpp" />
+    <ClCompile Include="ut\ut_Khronos_070-072_islamic_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_073-075_islamic_conv.cpp" />
+    <ClCompile Include="ut\ut_Khronos_076-088_islamic_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_089_hebrew_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_090-092_hebrew_conv.cpp" />
+    <ClCompile Include="ut\ut_Khronos_093-101_hebrew_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_102-104_vulcan_concepts.cpp" />
+    <ClCompile Include="ut\ut_Khronos_105-107_vulcan_conv.cpp" />
+    <ClCompile Include="ut\ut_Khronos_108-114_vulcan_class.cpp" />
+    <ClCompile Include="ut\ut_Khronos_010_gregorian_conv_full.cpp" />
+    <ClCompile Include="ut\ut_utilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b5761946-cc84-4463-80aa-2157a2204ea1}</ProjectGuid>
+    <RootNamespace>Khronos</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)gatslib\_include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)gatslib\_include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)gatslib\_include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)gatslib\_include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

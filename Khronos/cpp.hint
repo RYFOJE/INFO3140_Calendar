@@ -1,0 +1,4 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define GATS_TEST_CASE_WEIGHTED(name, weight) static class TestCase_##name : public gats::TestApp::TestCase { public: TestCase_##name() : TestCase(#name,weight) { } public: virtual void execute() override; } TestCase_##name##_g; void TestCase_##name :: execute()
