@@ -22,7 +22,7 @@
 
 // General concept phases
 #define PHASE_1 true
-#define PHASE_2 false
+#define PHASE_2 true
 #define PHASE_3 false
 
 // Gregorian concept phases

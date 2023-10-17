@@ -27,4 +27,13 @@ namespace khronos {
 	// VALUES
 	constexpr double EARTH_ORBITAL_PERIOD_DAYS = 365.256'363'004;
 
+	//// Define user-defined literals for _pm and _am
+	//hour_t operator ""_pm(unsigned long long hours) {
+	//	return static_cast<hour_t>(hours) + 12;
+	//}
+
+	//hour_t operator ""_am(unsigned long long hours) {
+	//	return static_cast<hour_t>(hours);
+	//}
+
 } // end-of-namespace khronos
