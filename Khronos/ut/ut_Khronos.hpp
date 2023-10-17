@@ -27,11 +27,11 @@
 
 // Gregorian concept phases
 #define PHASE_4 true
-#define PHASE_5 false
-#define PHASE_6 false
+#define PHASE_5 true
+#define PHASE_6 true
 
 // Gregorian to Julian Date phases
-#define PHASE_7 false
+#define PHASE_7 true
 #define PHASE_8 false
 
 #define PHASE_9 false

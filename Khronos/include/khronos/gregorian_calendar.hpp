@@ -39,7 +39,6 @@ namespace khronos {
 		@param year [in] Astronomical Gregorian year (1 CE = 1, 1 BCE = 0, 2 BCE = -1, etc.)
 		*/
 	constexpr bool is_gregorian_leapyear(year_t year) {
-
 		// TODO Find a cleaner way of writing the return statement
 		return year % 4 == 0 && year % 100 != 0 ||
 			year % 400 == 0;
@@ -61,8 +60,28 @@ namespace khronos {
 	constexpr char const * gregorian_short_month_name(month_t month) {
 		return civil::month_name_short(month);
 	}
+	
+	/** Returns the amount of days in a gregorian month **/
+	constexpr unsigned int gregorian_days_in_month(civil_month_codes_short month, bool is_leapyear) {
+		using namespace civil::detail;
+		return daysInMonth[is_leapyear][month];
+	}
 
+	/** Conversion to Julian Date **/
+	constexpr jd_t gregorian_to_jd(year_t year, month_t month, day_t day) {
+		//TODO Implement conversion using floating point conversion and not integer based conversion
 
+		year_t y = year - 1;
+		int leapAdjust = 0;
+
+		if (month > 2 && is_gregorian_leapyear(month))
+			leapAdjust = -1;
+
+		else if (month > 2 && !is_gregorian_leapyear(month))
+			leapAdjust = -2;
+
+		return GREGORIAN_EPOCH - 1 + 365 * y + (y / 4.0) - (y / 100.0) + (y / 400) + (((367 * month - 362) / 12) + leapAdjust + day);
+	}
 
 	// CLASSES
 	// --------------------------------------------------------------------------------------

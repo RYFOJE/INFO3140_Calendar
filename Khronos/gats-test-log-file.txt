@@ -2,9 +2,9 @@
   3.0	3.0	ut002_concept_time_of_day
   3.0	3.0	ut003_concept_CE_BCE_to_Gregorian_astro
   3.0	3.0	ut004_test_Gregorian_leapyear_test
-  0.0	3.0	ut005_test_Gregorian_days_of_month
-  0.0	3.0	ut006_test_Gregorian_month_name
-  0.0	3.0	ut007_gregorian_to_jdn_basic_test
+  3.0	3.0	ut005_test_Gregorian_days_of_month
+  3.0	3.0	ut006_test_Gregorian_month_name
+  0.3	3.0	ut007_gregorian_to_jdn_basic_test
   0.0	7.0	ut008_concept_gregorian_jdn_with_tod_test
   0.0	7.0	ut009_test_jd_to_gregorian
   0.0	1.0	ut010_test_gregorian_full
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 12.0 of 100.0 (12.0%)
+Score = 18.3 of 100.0 (18.3%)
