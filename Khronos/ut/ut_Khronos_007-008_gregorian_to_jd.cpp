@@ -48,7 +48,6 @@ GATS_TEST_CASE(ut007_gregorian_to_jdn_basic_test, GREGORIAN_CALENDAR_GROUP, 3) {
 		GATS_CHECK_MESSAGE(jg == jdn, oss.str());
 	};
 
-	std::cout << gregorian_to_jd(4714_BCE, November, 24);
 	test(4714_BCE, November, 24, -0.5, __LINE__);			// beginning of the Julian Epoch
 	test(1_CE, January, 1, GREGORIAN_EPOCH, __LINE__);		// January 1, 1 CE
 	test(1582_CE, October, 15, 2'299'160.5, __LINE__);		// Gregorian adoption date Spain, Portugal, Polish-Lithuanian Commonwealth, Papal
