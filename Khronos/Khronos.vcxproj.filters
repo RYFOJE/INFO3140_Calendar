@@ -152,9 +152,6 @@
     <ClCompile Include="libsrc\vulcan.cpp">
       <Filter>Source Files\khronos</Filter>
     </ClCompile>
-    <ClCompile Include="ut\ut_Khronos_004-006_gregorian_concepts.cpp">
-      <Filter>Source Files\ut</Filter>
-    </ClCompile>
     <ClCompile Include="ut\ut_Khronos_007-008_gregorian_to_jd.cpp">
       <Filter>Source Files\ut</Filter>
     </ClCompile>
@@ -210,6 +207,9 @@
       <Filter>Source Files\ut</Filter>
     </ClCompile>
     <ClCompile Include="ut\ut_Khronos_010_gregorian_conv_full.cpp">
+      <Filter>Source Files\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="ut\ut_Khronos_004-006_gregorian_concepts.cpp">
       <Filter>Source Files\ut</Filter>
     </ClCompile>
   </ItemGroup>
