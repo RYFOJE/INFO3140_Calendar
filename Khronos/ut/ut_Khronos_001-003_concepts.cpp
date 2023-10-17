@@ -54,7 +54,6 @@ GATS_TEST_CASE(ut002_concept_time_of_day, GREGORIAN_CALENDAR_GROUP, 3) {
 }
 
 
-
 GATS_TEST_CASE(ut003_concept_CE_BCE_to_Gregorian_astro, GREGORIAN_CALENDAR_GROUP, 3) {
 #if PHASE_3
 	using namespace khronos;

@@ -15,16 +15,22 @@ Khronos library 'time-of-day' declarations.
 
 namespace khronos {
 	// LITERALS
+
+
 	/* UDL - converts an 'AM' hour to 'military' hour. */
-
-
+	constexpr int operator "" _am(unsigned long long hours) {
+		return static_cast<int>(hours) % 12;
+	}
 
 
 	/* UDL - converts an 'PM' hour to 'military' hour. */
+	constexpr int operator "" _pm(unsigned long long hours) {
+		return (static_cast<int>(hours) % 12 + 12);
+	}
 
 
 	/* Seconds per day. */
-
+	constexpr second_t SECONDS_PER_DAY = 86'400;
 
 
 	/* H:M:S.S to time-of-day [0.0..1.0) */
