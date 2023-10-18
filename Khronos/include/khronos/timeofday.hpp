@@ -44,5 +44,12 @@ namespace khronos {
 		@param minutes [out] 0-59
 		@param seconds [out] [0.0..60.0)
 	*/
+	constexpr tod_t time_of_day(hour_t hours, minute_t minutes, second_t seconds) {
+
+		return (seconds + 60.0 * (minutes + 60.0 * hours))
+			/ (24.0 * 60.0 * 60.0);
+
+	}
+	
 
 } // end-of-namespace khronos

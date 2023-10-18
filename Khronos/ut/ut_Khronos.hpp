@@ -32,7 +32,7 @@
 
 // Gregorian to Julian Date phases
 #define PHASE_7 true
-#define PHASE_8 false
+#define PHASE_8 true
 
 #define PHASE_9 false
 

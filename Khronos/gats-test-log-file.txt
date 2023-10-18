@@ -4,8 +4,8 @@
   3.0	3.0	ut004_test_Gregorian_leapyear_test
   3.0	3.0	ut005_test_Gregorian_days_of_month
   3.0	3.0	ut006_test_Gregorian_month_name
-  2.7	3.0	ut007_gregorian_to_jdn_basic_test
-  0.0	7.0	ut008_concept_gregorian_jdn_with_tod_test
+  3.0	3.0	ut007_gregorian_to_jdn_basic_test
+  7.0	7.0	ut008_concept_gregorian_jdn_with_tod_test
   0.0	7.0	ut009_test_jd_to_gregorian
   0.0	1.0	ut010_test_gregorian_full
   0.0	1.0	ut011_Jdn_differences
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 20.7 of 100.0 (20.7%)
+Score = 28.0 of 100.0 (28.0%)
