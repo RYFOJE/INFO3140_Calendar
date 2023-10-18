@@ -80,7 +80,13 @@ namespace khronos {
 		else if (month > 2 && !is_gregorian_leapyear(month))
 			leapAdjust = -2;
 
-		return GREGORIAN_EPOCH - 1 + 365 * y + (y / 4.0) - (y / 100.0) + (y / 400) + (((367 * month - 362) / 12) + leapAdjust + day);
+		return 
+			GREGORIAN_EPOCH - 1 
+			+ 365.0 * y 
+			+ (y / 4) 
+			- (y / 100) 
+			+ (y / 400) 
+			+ static_cast<int>(((367.0 * month - 362) / 12.0) + leapAdjust + day);
 	}
 
 	// CLASSES

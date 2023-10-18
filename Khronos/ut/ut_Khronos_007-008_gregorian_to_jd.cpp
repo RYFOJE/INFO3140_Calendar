@@ -61,7 +61,6 @@ GATS_TEST_CASE(ut007_gregorian_to_jdn_basic_test, GREGORIAN_CALENDAR_GROUP, 3) {
 }
 
 
-
 GATS_TEST_CASE(ut008_concept_gregorian_jdn_with_tod_test, GREGORIAN_CALENDAR_GROUP, 7) {
 #if PHASE_8
 	using namespace khronos;
