@@ -68,26 +68,28 @@ namespace khronos {
 	}
 
 	/** Conversion to Julian Date **/
-	constexpr jd_t gregorian_to_jd(year_t year, month_t month, day_t day) {
-		//TODO Implement conversion using floating point conversion and not integer based conversion
 
-		year_t y = year - 1;
-		int leapAdjust = 0;
-
-		if (month > 2 && is_gregorian_leapyear(month))
-			leapAdjust = -1;
-
-		else if (month > 2 && !is_gregorian_leapyear(month))
-			leapAdjust = -2;
-
-		return 
-			GREGORIAN_EPOCH - 1 
-			+ 365.0 * y 
-			+ (y / 4) 
-			- (y / 100) 
-			+ (y / 400) 
-			+ static_cast<int>(((367.0 * month - 362) / 12.0) + leapAdjust + day);
+	constexpr jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth) {
+		long long a = (14 - month) / 12;
+		long long y = year + 4800 - a;
+		long long m = month + 12 * a - 3;
+		return dayOfMonth + (153 * m + 2) / 5 + 365 * y + y / 4 - y / 100 + y / 400 - 32045 - 0.5;
 	}
+
+	/*inline jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth) {
+		long long y = year - 1;
+		return
+			GREGORIAN_EPOCH - 1
+			+ 365 * y
+			+ floor(y / 4.0)
+			- floor(y / 100.0)
+			+ floor(y / 400.0)
+			+ floor(((367.0 * month - 362.0) / 12.0)
+				+ ((month <= 2)
+					? 0
+					: (is_gregorian_leapyear(year) ? -1 : -2)))
+			+ dayOfMonth;
+	}*/
 
 	// CLASSES
 	// --------------------------------------------------------------------------------------
