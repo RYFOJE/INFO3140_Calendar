@@ -16,10 +16,26 @@ namespace khronos {
 		time_t utcTime = time(NULL);
 		struct tm tmLocal;
 		localtime_s(&tmLocal, &utcTime);
-		
+
 		// TODO Find a cleaner solution to this code
-		jd_ = gregorian_to_jd(year_t(tmLocal.tm_year) + 1900, month_t(tmLocal.tm_mon + 1), 
+		jd_ = gregorian_to_jd(year_t(tmLocal.tm_year) + 1900, month_t(tmLocal.tm_mon + 1),
 			day_t(tmLocal.tm_mday), hour_t(tmLocal.tm_hour), minute_t(tmLocal.tm_min), second_t(tmLocal.tm_sec));
+	}
+
+	Jd::Jd(now_t now) {
+		if (now == NOTIMEOFDAY) {
+			// TODO Remove redundant code from 
+			time_t utcTime = time(NULL);
+			struct tm tmLocal;
+			localtime_s(&tmLocal, &utcTime);
+
+			// TODO Find a cleaner solution to this code
+			jd_ = gregorian_to_jd(year_t(tmLocal.tm_year) + 1900, month_t(tmLocal.tm_mon + 1), day_t(tmLocal.tm_mday));
+		}
+
+		else {
+			Jd();
+		}
 	}
 
 	std::string Jd::to_string() const {

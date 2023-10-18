@@ -102,6 +102,7 @@ namespace khronos {
 
 	public:
 		Jd();
+		Jd(now_t now);
 		constexpr Jd(double time) : jd_(time) {};
 		
 		constexpr jd_t jd() const { return jd_; }

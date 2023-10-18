@@ -10,8 +10,8 @@
   1.0	1.0	ut010_test_gregorian_full
   1.0	1.0	ut011_Jdn_differences
   1.0	1.0	ut012_test_Jd_ctor_default
-  0.0	2.0	ut013_test_Jd_ctor_default_no_time_of_day
-  0.0	1.0	ut014_test_Jd_ctor_literal
+  2.0	2.0	ut013_test_Jd_ctor_default_no_time_of_day
+  1.0	1.0	ut014_test_Jd_ctor_literal
   0.0	1.0	ut015_test_Jd_add_days
   0.0	1.0	ut016_test_Jd_add_weeks
   0.0	1.0	ut017_test_Jd_add_years
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 38.0 of 100.0 (38.0%)
+Score = 41.0 of 100.0 (41.0%)
