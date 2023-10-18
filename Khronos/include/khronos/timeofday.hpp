@@ -55,15 +55,15 @@ namespace khronos {
 	inline void tod_to_hms(const tod_t tod, hour_t& hours, minute_t& minutes, second_t& seconds) {
 		
 		// TODO Check to see if I can use int instead as this value will always be floored
-		long long secondsInDay = floor(tod * 24 * 60 * 60 + 0.5);
+		long long secondsInDay = static_cast<long long>(floor(tod * 24 * 60 * 60 + 0.5));
 
 		// TODO Test to see if this is a valid way of doing it with modulo
 		hours = static_cast<hour_t>(secondsInDay / (60.0 * 60.0)) + 12;
 		hours %= 24;
 
 		// TODO Find better implementation of namespace
-		minutes = static_cast<minute_t>(utility::mod((secondsInDay / 60.0), 60));
-		seconds = static_cast<minute_t>(utility::mod(secondsInDay, 60));
+		minutes = static_cast<minute_t>(utility::mod(static_cast<double>(secondsInDay / 60.0), 60));
+		seconds = static_cast<minute_t>(utility::mod(static_cast<double>(secondsInDay), 60));
 	}
 	
 

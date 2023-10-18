@@ -16,7 +16,14 @@ namespace khronos {
 		time_t utcTime = time(NULL);
 		struct tm tmLocal;
 		localtime_s(&tmLocal, &utcTime);
-		jd_ = gregorian_to_jd(year_t(tmLocal.tm_year) + 1900, month_t(tmLocal.tm_mon + 1), day_t(tmLocal.tm_mday));
+		
+		// TODO Find a cleaner solution to this code
+		jd_ = gregorian_to_jd(year_t(tmLocal.tm_year) + 1900, month_t(tmLocal.tm_mon + 1), 
+			day_t(tmLocal.tm_mday), hour_t(tmLocal.tm_hour), minute_t(tmLocal.tm_min), second_t(tmLocal.tm_sec));
+	}
+
+	std::string Jd::to_string() const {
+		return std::to_string(jd_);
 	}
 
 }

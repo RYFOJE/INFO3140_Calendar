@@ -102,9 +102,8 @@ namespace khronos {
 
 	public:
 		Jd();
-		Jd(double time) : jd_(time) {};
-
-		constexpr Jd(jd_t jd) :jd_{ jd } {}
+		constexpr Jd(double time) : jd_(time) {};
+		
 		constexpr jd_t jd() const { return jd_; }
 		std::string to_string() const;
 	};
