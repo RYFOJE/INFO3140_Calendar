@@ -92,4 +92,35 @@ namespace khronos {
 
 	}
 
+
+
+	/** JD CLASS DEFINITION **/
+
+	class Jd {
+
+		jd_t jd_;
+
+	public:
+		Jd();
+		Jd(double time) : jd_(time) {};
+
+		constexpr Jd(jd_t jd) :jd_{ jd } {}
+		constexpr jd_t jd() const { return jd_; }
+		std::string to_string() const;
+	};
+
+	/** stream insertion operator. */
+	inline std::ostream& operator << (std::ostream& os, Jd const& jd) {
+		return os << jd.to_string();
+	}
+
+	/** Jd relational operators. */
+	constexpr auto operator <=> (Jd const& lhs, Jd const& rhs) { return lhs.jd() <=> rhs.jd(); }
+	constexpr auto operator == (Jd const& lhs, Jd const& rhs) { return lhs.jd() == rhs.jd(); }
+
+	/**Jd difference operator. */
+	constexpr jd_t operator - (Jd const& lhs, Jd const& rhs) { return lhs.jd() - rhs.jd(); }
+
+
+
 } // end-of-namespace khronos

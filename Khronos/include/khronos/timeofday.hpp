@@ -57,6 +57,7 @@ namespace khronos {
 		// TODO Check to see if I can use int instead as this value will always be floored
 		long long secondsInDay = floor(tod * 24 * 60 * 60 + 0.5);
 
+		// TODO Test to see if this is a valid way of doing it with modulo
 		hours = static_cast<hour_t>(secondsInDay / (60.0 * 60.0)) + 12;
 		hours %= 24;
 
