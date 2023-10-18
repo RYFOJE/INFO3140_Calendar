@@ -100,8 +100,32 @@ namespace khronos {
 
 	/**	Proleptic Gregorian Calendar Date class. */
 
+	class Gregorian {
+		year_t		year_ = 1;
+		month_t		month_ = 1;
+		day_t		day_ = 1;
+
+	public:
+		Gregorian();
 
 
+
+		/*! Get the year.
+		\return Astronomical year. */
+		constexpr year_t  year() const { return year_; }
+
+
+		/*! Get the month.
+			\return Month number [1..12] */
+		constexpr month_t month() const { return month_; }
+
+
+		/*! Get the day of the month.
+			\return Day of month number [1..31]. */
+		constexpr day_t day() const { return day_; }
+
+
+	};
 	// OPERATORS
 	// ====================
 

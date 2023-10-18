@@ -71,8 +71,7 @@ GATS_TEST_CASE(ut009_test_jd_to_gregorian, GREGORIAN_CALENDAR_GROUP, 7) {
 	test(1977_CE, April, 26, 2'443259.5, __LINE__);
 	test(2012_CE, September, 14, 2'456'184.5, __LINE__);
 	test(2132_CE, August, 31, 2'500'000 - 0.5, __LINE__);
-
-
+	
 	auto test2 = [this](year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second, jd_t jd, int line) {
 		year_t y;
 		month_t m;

@@ -34,9 +34,9 @@
 #define PHASE_7 true
 #define PHASE_8 true
 
-#define PHASE_9 false
+#define PHASE_9 true
 
-#define PHASE_10 false
+#define PHASE_10 true
 #define PHASE_11 false
 #define PHASE_12 false
 #define PHASE_13 false

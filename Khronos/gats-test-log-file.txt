@@ -6,7 +6,7 @@
   3.0	3.0	ut006_test_Gregorian_month_name
   3.0	3.0	ut007_gregorian_to_jdn_basic_test
   7.0	7.0	ut008_concept_gregorian_jdn_with_tod_test
-  0.0	7.0	ut009_test_jd_to_gregorian
+  7.0	7.0	ut009_test_jd_to_gregorian
   0.0	1.0	ut010_test_gregorian_full
   0.0	1.0	ut011_Jdn_differences
   0.0	1.0	ut012_test_Jd_ctor_default
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 28.0 of 100.0 (28.0%)
+Score = 35.0 of 100.0 (35.0%)
