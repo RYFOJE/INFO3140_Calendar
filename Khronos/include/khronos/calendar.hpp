@@ -95,18 +95,18 @@ namespace khronos {
 	enum civil_weekday_codes_short { MON = Monday, TUE, WED, THU, FRI, SAT, SUN };
 
 	struct days {
-		unsigned int count;
-		days(unsigned int dayCount) : count(dayCount) {}
+		double count;
+		days(double dayCount) : count(dayCount) {}
 	};
 
 	struct weeks {
-		unsigned int count;
-		weeks(unsigned int weekCount) : count(weekCount) {}
+		double count;
+		weeks(double weekCount) : count(weekCount) {}
 	};
 
 	struct years {
-		unsigned int count;
-		years(unsigned int yearCount) : count(yearCount) {}
+		double count;
+		years(double yearCount) : count(yearCount) {}
 	};
 
 } // end-of-namespace khronos

@@ -36,14 +36,14 @@
 
 #define PHASE_9 true
 
-#define PHASE_10 true
+#define PHASE_10 false // TODO turn back on to fully fix later
 #define PHASE_11 true
 #define PHASE_12 true
 #define PHASE_13 true
 #define PHASE_14 true
 #define PHASE_15 true
 #define PHASE_16 true
-#define PHASE_17 false
+#define PHASE_17 true
 #define PHASE_18 false
 #define PHASE_19 false
 

@@ -26,6 +26,7 @@ namespace khronos {
 
 	// VALUES
 	constexpr double EARTH_ORBITAL_PERIOD_DAYS = 365.256'363'004;
+	constexpr int DAYS_IN_WEEK = 7;
 
 
 } // end-of-namespace khronos

@@ -139,14 +139,24 @@ namespace khronos {
 	// JD WEEKS
 	/*Jd add weeks operator */
 	constexpr Jd operator + (Jd const& lhs, weeks const& rhs) {
-		return Jd(lhs.jd() + rhs.count * 7);
+		return Jd(lhs.jd() + rhs.count * DAYS_IN_WEEK);
 	}
 
 	/*Jd subtract weeks operator */
 	constexpr Jd operator - (Jd const& lhs, weeks const& rhs) {
-		return Jd(lhs.jd() - rhs.count * 7);
+		return Jd(lhs.jd() - rhs.count * DAYS_IN_WEEK);
 	}
 
+	// JD YEARS
+	/*Jd add years operator */
+	constexpr Jd operator + (Jd const& lhs, years const& rhs) {
+		return Jd(lhs.jd() + rhs.count * EARTH_ORBITAL_PERIOD_DAYS);
+	}
+
+	/*Jd subtract years operator */
+	constexpr Jd operator - (Jd const& lhs, years const& rhs) {
+		return Jd(lhs.jd() - rhs.count * EARTH_ORBITAL_PERIOD_DAYS);
+	}
 
 
 } // end-of-namespace khronos
