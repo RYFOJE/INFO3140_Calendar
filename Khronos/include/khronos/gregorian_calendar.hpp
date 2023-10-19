@@ -106,9 +106,9 @@ namespace khronos {
 		day_t		day_ = 1;
 
 	public:
-		Gregorian();
-
-
+		constexpr Gregorian();
+		constexpr Gregorian(year_t year, civil_month_codes_long month, day_t day) :
+			year_(year), month_(month), day_(day) {};
 
 		/*! Get the year.
 		\return Astronomical year. */
@@ -128,6 +128,20 @@ namespace khronos {
 	};
 	// OPERATORS
 	// ====================
+
+
+
+	// FUNCTIONS
+
+	inline jd_t gregorian_to_jd(const Gregorian g) {
+		return gregorian_to_jd(g.year(), g.month(), g.day());
+	}
+
+	inline civil_weekday_codes_long day_of_week(const Gregorian g) {
+
+		jd_t jd = gregorian_to_jd(g);
+		return day_of_week(jd);
+	}
 
 
 } // end-of-namespace khronos

@@ -93,11 +93,14 @@ namespace khronos {
 
 	}
 
+	inline civil_weekday_codes_long day_of_week(const jd_t jd) {
 
+		return static_cast<civil_weekday_codes_long>(utility::mod((jd + 0.5), 7));
+
+	}
+	
 
 	/** JD CLASS DEFINITION **/
-
-
 
 	class Jd {
 
@@ -111,6 +114,9 @@ namespace khronos {
 		constexpr jd_t jd() const { return jd_; }
 		std::string to_string() const;
 	};
+
+
+	// FUNCTIONS ON JD CLASS
 
 	/** stream insertion operator. */
 	inline std::ostream& operator << (std::ostream& os, Jd const& jd) {
@@ -157,6 +163,8 @@ namespace khronos {
 	constexpr Jd operator - (Jd const& lhs, years const& rhs) {
 		return Jd(lhs.jd() - rhs.count * EARTH_ORBITAL_PERIOD_DAYS);
 	}
+
+
 
 
 } // end-of-namespace khronos

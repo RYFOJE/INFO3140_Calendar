@@ -15,7 +15,7 @@
   1.0	1.0	ut015_test_Jd_add_days
   1.0	1.0	ut016_test_Jd_add_weeks
   1.0	1.0	ut017_test_Jd_add_years
-  0.0	1.0	ut018_test_Jd_day_of_week
+  1.0	1.0	ut018_test_Jd_day_of_week
   0.0	1.0	ut019_Test_Jd_relational
   0.0	1.0	ut020_test_Jd_to_string
   0.0	0.3	ut021_gregorian_differences
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 43.0 of 100.0 (43.0%)
+Score = 44.0 of 100.0 (44.0%)
