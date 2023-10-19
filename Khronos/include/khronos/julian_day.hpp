@@ -37,6 +37,7 @@ the program(s) have been supplied.
 #include <khronos/def.hpp>
 #include <khronos/timeofday.hpp>
 #include <khronos/utility.hpp>
+#include <khronos/calendar.hpp>
 
 
 
@@ -96,6 +97,8 @@ namespace khronos {
 
 	/** JD CLASS DEFINITION **/
 
+
+
 	class Jd {
 
 		jd_t jd_;
@@ -120,6 +123,29 @@ namespace khronos {
 
 	/**Jd difference operator. */
 	constexpr jd_t operator - (Jd const& lhs, Jd const& rhs) { return lhs.jd() - rhs.jd(); }
+
+
+	// JD DAYS
+	/** Jd add days operator */
+	constexpr Jd operator + (Jd const& lhs, days const& rhs) { 
+		return Jd(lhs.jd() + rhs.count);
+	}
+
+	/*Jd remove days operator */
+	constexpr Jd operator - (Jd const& lhs, days const& rhs) {
+		return Jd(lhs.jd() - rhs.count);
+	}
+
+	// JD WEEKS
+	/*Jd add weeks operator */
+	constexpr Jd operator + (Jd const& lhs, weeks const& rhs) {
+		return Jd(lhs.jd() + rhs.count * 7);
+	}
+
+	/*Jd subtract weeks operator */
+	constexpr Jd operator - (Jd const& lhs, weeks const& rhs) {
+		return Jd(lhs.jd() - rhs.count * 7);
+	}
 
 
 
