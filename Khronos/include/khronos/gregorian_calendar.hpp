@@ -110,6 +110,8 @@ namespace khronos {
 		constexpr Gregorian(year_t year, civil_month_codes_long month, day_t day) :
 			year_(year), month_(month), day_(day) {};
 
+		//constexpr Gregorian(int year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
+
 		/*! Get the year.
 		\return Astronomical year. */
 		constexpr year_t  year() const { return year_; }
