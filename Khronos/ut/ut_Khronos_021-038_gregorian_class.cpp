@@ -41,14 +41,14 @@ GATS_TEST_CASE(ut021_gregorian_differences, GREGORIAN_CALENDAR_GROUP, oneThird) 
 	Gregorian past(1858, 11, 16);
 	Gregorian future(2132, 8, 31);
 
-	/*GATS_CHECK(future - past == 100'000);
+	GATS_CHECK(future - past == 100'000);
 	GATS_CHECK(past - future == -100'000);
 
 	Gregorian start(2000, 1, 1);
 	Gregorian end(2001, 1, 1);
 
 	GATS_CHECK(end - start == 366);
-	GATS_CHECK(start - end == -366);*/
+	GATS_CHECK(start - end == -366);
 #endif
 }
 

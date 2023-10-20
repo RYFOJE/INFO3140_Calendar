@@ -48,8 +48,8 @@
 #define PHASE_19 true
 
 #define PHASE_20 true
-#define PHASE_21 false
-#define PHASE_22 false
+#define PHASE_21 true
+#define PHASE_22 true
 #define PHASE_23 false
 #define PHASE_24 false
 #define PHASE_25 false

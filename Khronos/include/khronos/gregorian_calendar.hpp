@@ -105,10 +105,17 @@ namespace khronos {
 		month_t		month_ = 1;
 		day_t		day_ = 1;
 
+		hour_t		hours = 1;
+		minute_t	minutes = 1;
+		second_t	seconds = 1;
+
 	public:
 		constexpr Gregorian();
-		constexpr Gregorian(year_t year, civil_month_codes_long month, day_t day) :
+		constexpr Gregorian(Jd const& jd);
+		constexpr Gregorian(now_t isCurrTime);
+		constexpr Gregorian(year_t year, month_t month, day_t day) :
 			year_(year), month_(month), day_(day) {};
+		Gregorian(jd_t);
 
 		//constexpr Gregorian(int year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
 
@@ -124,13 +131,16 @@ namespace khronos {
 
 		/*! Get the day of the month.
 			\return Day of month number [1..31]. */
-		constexpr day_t day() const { return day_; }
-
+		constexpr day_t day() const { return day_; };
 
 	};
 	// OPERATORS
 	// ====================
+	
+	// OPERATORS
+	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
 
+	bool operator == (Gregorian const& lhs, int const& rhs);
 
 
 	// FUNCTIONS
