@@ -176,6 +176,10 @@ namespace khronos {
 	// OPERATORS
 	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
 
+	Gregorian operator + (Gregorian const& lhs, months const& rhs);
+
+	Gregorian operator - (Gregorian const& lhs, months const& rhs);
+
 	// FUNCTIONS
 
 	inline jd_t gregorian_to_jd(const Gregorian g) {

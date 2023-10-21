@@ -104,6 +104,11 @@ namespace khronos {
 		weeks(double weekCount) : count(weekCount) {}
 	};
 
+	struct months {
+		month_t count;
+		months(month_t monthCount) : count(monthCount) {}
+	};
+
 	struct years {
 		double count;
 		years(double yearCount) : count(yearCount) {}
