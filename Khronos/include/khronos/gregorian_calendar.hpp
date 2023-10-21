@@ -197,4 +197,18 @@ namespace khronos {
 	}
 
 
+	// ELEMENT FUNCTIONS
+
+	year_t year(const Gregorian g) { return g.year(); }
+	
+	month_t month(const Gregorian g) { return g.month(); }
+
+	day_t day(const Gregorian g) { return g.day(); }
+
+	hour_t hour(const Gregorian g) { return g.hour(); }
+
+	minute_t minute(const Gregorian g) { return g.minute(); }
+
+	second_t second(const Gregorian g) { return g.second(); }
+
 } // end-of-namespace khronos

@@ -33,7 +33,7 @@
   0.3	0.3	ut033_test_Gregorian_add_month_leap
   0.3	0.3	ut034_test_Gregorian_add_years
   0.3	0.3	ut035_test_Gregorian_add_years_leapyear
-  0.0	0.3	ut036_test_Gregorian_relational
+  0.3	0.3	ut036_test_Gregorian_relational
   0.0	0.3	ut037_test_Gregorian_element_functions
   0.0	0.3	ut038_test_Gregorian_to_string
   0.0	3.0	ut039_day_of_week_base_func_test
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 51.0 of 100.0 (51.0%)
+Score = 51.3 of 100.0 (51.3%)
