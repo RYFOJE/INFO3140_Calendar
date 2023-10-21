@@ -22,7 +22,7 @@ namespace khronos {
 	}
 
 	Gregorian::Gregorian(Jd const& jd) {
-		jd_to_gregorian(jd.jd(), year_, month_, day_);
+		jd_to_gregorian(jd.jd(), year_, month_, day_, hour_, minute_, second_);
 	}
 
 	Gregorian::Gregorian(now_t isCurrTime) {
