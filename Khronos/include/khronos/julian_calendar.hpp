@@ -105,9 +105,9 @@ namespace khronos {
 
 	public:
 		
-		Julian(now_t isCurrTime = WTIMEOFDAY);
+		Julian(now_t isCurrTime = WTIMEOFDAY) : Julian(Jd(isCurrTime)) {}
 		Julian(jd_t jd);
-		Julian(Jd jd);
+		Julian(Jd jd_o) : Julian(jd_o.jd()) {}; // Error happens when calling the constructor here
 		Julian(year_t year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
 		
 		Julian(year_t year, month_t month, day_t day,

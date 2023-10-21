@@ -62,6 +62,9 @@ GATS_TEST_CASE(ut046_test_Julian_ctor_default, JULIAN_CALENDAR_GROUP, oneThird) 
 		day_t(tmLocal.tm_mday)
 	);
 
+	Jd jdLocal = localDateTime;
+	Jd jdNow = now;
+	
 	GATS_CHECK(localDateTime == now);
 	GATS_CHECK(localDate == today);
 #endif

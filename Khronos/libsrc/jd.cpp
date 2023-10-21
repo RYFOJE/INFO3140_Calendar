@@ -35,7 +35,7 @@ namespace khronos {
 		}
 
 		else {
-			Jd();
+			*this = Jd();
 		}
 	}
 
