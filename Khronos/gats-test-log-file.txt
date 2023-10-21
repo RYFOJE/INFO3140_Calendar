@@ -23,10 +23,10 @@
   0.3	0.3	ut023_test_gregorian_ctor_literal
   0.3	0.3	ut024_test_Gregorian_ctor_from_Jd
   0.3	0.3	ut025_test_Gregorian_cast_to_Jd
-  0.0	0.3	ut026_test_Gregorian_assignment_from_Jd
-  0.0	0.3	ut027_test_Gregorian_add_days
-  0.0	0.3	ut028_test_Gregorian_add_days_with_time
-  0.0	0.3	ut029_test_Gregorian_add_weeks
+  0.3	0.3	ut026_test_Gregorian_assignment_from_Jd
+  0.3	0.3	ut027_test_Gregorian_add_days
+  0.3	0.3	ut028_test_Gregorian_add_days_with_time
+  0.3	0.3	ut029_test_Gregorian_add_weeks
   0.0	0.3	ut030_test_Gregorian_add_weeks_with_time
   0.0	0.3	ut031_test_Gregorian_add_months
   0.0	0.3	ut032_test_Gregorian_add_months_w_carry
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 47.7 of 100.0 (47.7%)
+Score = 49.0 of 100.0 (49.0%)

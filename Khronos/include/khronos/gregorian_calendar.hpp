@@ -176,11 +176,6 @@ namespace khronos {
 	// OPERATORS
 	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
 
-	bool operator == (Gregorian const& lhs, Gregorian const& rhs);
-
-	bool operator == (Gregorian const& lhs, int const& rhs);
-
-
 	// FUNCTIONS
 
 	inline jd_t gregorian_to_jd(const Gregorian g) {

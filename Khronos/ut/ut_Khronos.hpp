@@ -53,10 +53,10 @@
 #define PHASE_23 true
 #define PHASE_24 true
 #define PHASE_25 true
-#define PHASE_26 false
-#define PHASE_27 false
-#define PHASE_28 false
-#define PHASE_29 false
+#define PHASE_26 true
+#define PHASE_27 true
+#define PHASE_28 true
+#define PHASE_29 true
 
 #define PHASE_30 false
 #define PHASE_31 false

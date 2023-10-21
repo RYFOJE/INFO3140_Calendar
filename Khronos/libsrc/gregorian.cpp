@@ -22,7 +22,7 @@ namespace khronos {
 	}
 
 	Gregorian::Gregorian(Jd const& jd) {
-		jd_to_gregorian(jd.jd(), year_, month_, day_);
+		jd_to_gregorian(jd.jd(), year_, month_, day_, hour_, minute_, second_);
 	}
 
 	Gregorian::Gregorian(now_t isCurrTime) {
@@ -56,26 +56,6 @@ namespace khronos {
 		jd_t jd_rhs = gregorian_to_jd(rhs);
 
 		return jd_lhs - jd_rhs;
-	}
-
-	bool operator == (Gregorian const& lhs, Gregorian const& rhs) {
-
-		// Faster than converting to jd
-		return (lhs.year() == rhs.year() &&
-			lhs.month() == rhs.month() &&
-			lhs.day() == rhs.day() &&
-			lhs.hour() == rhs.hour() &&
-			lhs.minute() == rhs.minute() &&
-			lhs.second() == rhs.second());
-
-	}
-
-	bool operator == (Gregorian const& lhs, int const& rhs) {
-
-		jd_t jd_lhs = gregorian_to_jd(lhs);
-
-		return jd_lhs == rhs;
-
 	}
 
 	Gregorian::operator Jd() const {
