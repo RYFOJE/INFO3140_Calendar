@@ -87,7 +87,7 @@ namespace khronos {
 	Gregorian operator + (Gregorian const& lhs, years const& rhs) {
 		year_t year = lhs.year() + rhs.count;
 		month_t month = lhs.month();
-		day_t day = (month == 2 && lhs.day() == 2 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
+		day_t day = (month == 2 && lhs.day() == 29 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
 		
 		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
 	}
@@ -95,7 +95,7 @@ namespace khronos {
 	Gregorian operator - (Gregorian const& lhs, years const& rhs) {
 		year_t year = lhs.year() - rhs.count;
 		month_t month = lhs.month();
-		day_t day = (month == 2 && lhs.day() == 2 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
+		day_t day = (month == 2 && lhs.day() == 28 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
 
 		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
 	}

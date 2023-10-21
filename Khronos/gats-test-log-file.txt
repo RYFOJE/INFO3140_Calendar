@@ -32,7 +32,7 @@
   0.3	0.3	ut032_test_Gregorian_add_months_w_carry
   0.3	0.3	ut033_test_Gregorian_add_month_leap
   0.3	0.3	ut034_test_Gregorian_add_years
-  0.0	0.3	ut035_test_Gregorian_add_years_leapyear
+  0.3	0.3	ut035_test_Gregorian_add_years_leapyear
   0.0	0.3	ut036_test_Gregorian_relational
   0.0	0.3	ut037_test_Gregorian_element_functions
   0.0	0.3	ut038_test_Gregorian_to_string
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 50.7 of 100.0 (50.7%)
+Score = 51.0 of 100.0 (51.0%)
