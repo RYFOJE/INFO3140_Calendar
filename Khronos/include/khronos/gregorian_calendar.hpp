@@ -167,6 +167,8 @@ namespace khronos {
 			\return hour [0 - 23]. */
 		constexpr second_t second() const { return second_; };
 
+		operator Jd() const;
+
 	};
 	// OPERATORS
 	// ====================

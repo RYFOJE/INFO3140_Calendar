@@ -78,4 +78,10 @@ namespace khronos {
 
 	}
 
+	Gregorian::operator Jd() const {
+		
+		return Jd(gregorian_to_jd(year_, month_, day_, hour_, minute_, second_));
+
+	}
+	
 }
