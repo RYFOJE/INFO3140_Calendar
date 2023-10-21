@@ -104,8 +104,11 @@ namespace khronos {
 		year_t		year_ = 1;
 		month_t		month_ = 1;
 		day_t		day_ = 1;
-
-		tod_t		timeOfDay_ = 0;
+		
+		// TODO Maybe use a struct instead of three variables
+		hour_t		hour_ = 0;
+		minute_t	minute_ = 0;
+		second_t	second_ = 0;
 
 	public:
 
@@ -152,9 +155,17 @@ namespace khronos {
 			\return Day of month number [1..31]. */
 		constexpr day_t day() const { return day_; };
 
-		/*! Get the time of day.
-			\return time of day [0..0.999]. */
-		constexpr tod_t timeOfDay() const { return timeOfDay_; };
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr hour_t hour() const { return hour_; };
+
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr minute_t minute() const { return minute_; };
+		
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr second_t second() const { return second_; };
 
 	};
 	// OPERATORS
