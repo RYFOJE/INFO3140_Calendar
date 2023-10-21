@@ -111,8 +111,8 @@ namespace khronos {
 
 	public:
 		constexpr Gregorian();
-		constexpr Gregorian(Jd const& jd);
-		constexpr Gregorian(now_t isCurrTime);
+		Gregorian(Jd const& jd);
+		Gregorian(now_t isCurrTime);
 		constexpr Gregorian(year_t year, month_t month, day_t day) :
 			year_(year), month_(month), day_(day) {};
 		Gregorian(jd_t);
