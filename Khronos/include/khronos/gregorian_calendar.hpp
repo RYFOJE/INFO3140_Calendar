@@ -105,33 +105,56 @@ namespace khronos {
 		month_t		month_ = 1;
 		day_t		day_ = 1;
 
-		hour_t		hours = 1;
-		minute_t	minutes = 1;
-		second_t	seconds = 1;
+		tod_t		timeOfDay_ = 0;
 
 	public:
-		constexpr Gregorian();
-		Gregorian(Jd const& jd);
-		Gregorian(now_t isCurrTime);
-		constexpr Gregorian(year_t year, month_t month, day_t day) :
-			year_(year), month_(month), day_(day) {};
-		Gregorian(jd_t);
 
-		//constexpr Gregorian(int year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
+		// CONSTRUCTORS
+		
+		/**
+		 * @brief		Constructor that will build a Gregorian Date based on a Julian Date
+		 * @param jd	The Julian date to base the Gregorian object off of
+		*/
+		Gregorian(Jd const& jd);
+		
+		/**
+		 * @brief				Default constructor that will see if it include WTIMEOFDAY or NOTIMEOFDAY
+		 * @param isCurrTime	now_t enum
+		*/
+		Gregorian(now_t isCurrTime = WTIMEOFDAY);
+
+		Gregorian(jd_t jd);
+
+		Gregorian(year_t year, month_t month, day_t day) :
+			year_(year), month_(month), day_(day) {};
+
+		/**
+		 * @brief			Constructor that will create a gregorian object including time of day
+		 * @param year		Year of the Gregorian Object
+		 * @param month		Month of the Gregorian Object
+		 * @param day		Days of the Gregorian Object
+		 * @param hour		Hours of the Gregorian Object
+		 * @param minute	Minutes of the Gregorian Object
+		 * @param second	Seconds of the Gregorian Object
+		*/
+		Gregorian(year_t year, month_t month, day_t day,
+			hour_t hour, minute_t minute, second_t second);
 
 		/*! Get the year.
 		\return Astronomical year. */
 		constexpr year_t  year() const { return year_; }
 
-
 		/*! Get the month.
 			\return Month number [1..12] */
 		constexpr month_t month() const { return month_; }
 
-
 		/*! Get the day of the month.
 			\return Day of month number [1..31]. */
 		constexpr day_t day() const { return day_; };
+
+		/*! Get the time of day.
+			\return time of day [0..0.999]. */
+		constexpr tod_t timeOfDay() const { return timeOfDay_; };
 
 	};
 	// OPERATORS
@@ -139,6 +162,8 @@ namespace khronos {
 	
 	// OPERATORS
 	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
+
+	bool operator == (Gregorian const& lhs, Gregorian const& rhs);
 
 	bool operator == (Gregorian const& lhs, int const& rhs);
 
