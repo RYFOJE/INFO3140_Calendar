@@ -58,26 +58,6 @@ namespace khronos {
 		return jd_lhs - jd_rhs;
 	}
 
-	bool operator == (Gregorian const& lhs, Gregorian const& rhs) {
-
-		// Faster than converting to jd
-		return (lhs.year() == rhs.year() &&
-			lhs.month() == rhs.month() &&
-			lhs.day() == rhs.day() &&
-			lhs.hour() == rhs.hour() &&
-			lhs.minute() == rhs.minute() &&
-			lhs.second() == rhs.second());
-
-	}
-
-	bool operator == (Gregorian const& lhs, int const& rhs) {
-
-		jd_t jd_lhs = gregorian_to_jd(lhs);
-
-		return jd_lhs == rhs;
-
-	}
-
 	Gregorian::operator Jd() const {
 		
 		return Jd(gregorian_to_jd(year_, month_, day_, hour_, minute_, second_));
