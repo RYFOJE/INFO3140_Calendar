@@ -67,11 +67,7 @@ namespace khronos {
 		month -= adjust * 12;
 		day_t day = std::min(lhs.day(), gregorian_days_in_month(month, is_gregorian_leapyear(year)));
 		
-		hour_t hour = lhs.hour();
-		minute_t minute = lhs.minute();
-		second_t second = lhs.second();
-		
-		return Gregorian(year, month, day, hour, minute, second);
+		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
 		
 	}
 	
@@ -84,12 +80,24 @@ namespace khronos {
 		month += adjust * 12;
 		day_t day = std::min(lhs.day(), gregorian_days_in_month(month, is_gregorian_leapyear(year)));
 
-		hour_t hour = lhs.hour();
-		minute_t minute = lhs.minute();
-		second_t second = lhs.second();
-
-		return Gregorian(year, month, day, hour, minute, second);
+		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
 		
+	}
+
+	Gregorian operator + (Gregorian const& lhs, years const& rhs) {
+		year_t year = lhs.year() + rhs.count;
+		month_t month = lhs.month();
+		day_t day = (month == 2 && lhs.day() == 2 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
+		
+		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
+	}
+
+	Gregorian operator - (Gregorian const& lhs, years const& rhs) {
+		year_t year = lhs.year() - rhs.count;
+		month_t month = lhs.month();
+		day_t day = (month == 2 && lhs.day() == 2 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
+
+		return Gregorian(year, month, day, lhs.hour(), lhs.minute(), lhs.second());
 	}
 	
 	Gregorian::operator Jd() const {
