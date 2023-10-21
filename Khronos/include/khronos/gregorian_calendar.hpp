@@ -13,6 +13,7 @@ Khronos library 'Gregorian calendar' declarations.
 #include <khronos/calendar.hpp>
 #include <khronos/julian_day.hpp>
 #include <string>
+#include <sstream>
 #include <utility>
 
 
@@ -169,6 +170,8 @@ namespace khronos {
 
 		operator Jd() const;
 
+		std::string to_string() const;
+
 	};
 	// OPERATORS
 	// ====================
@@ -196,19 +199,23 @@ namespace khronos {
 		return day_of_week(jd);
 	}
 
+	inline std::ostream& operator << (std::ostream& os, Gregorian const& gregorian) {
+		return os << gregorian.to_string();
+	}
+
 
 	// ELEMENT FUNCTIONS
 
-	year_t year(const Gregorian g) { return g.year(); }
+	inline year_t year(const Gregorian g) { return g.year(); }
 	
-	month_t month(const Gregorian g) { return g.month(); }
+	inline month_t month(const Gregorian g) { return g.month(); }
 
-	day_t day(const Gregorian g) { return g.day(); }
+	inline day_t day(const Gregorian g) { return g.day(); }
 
-	hour_t hour(const Gregorian g) { return g.hour(); }
+	inline hour_t hour(const Gregorian g) { return g.hour(); }
 
-	minute_t minute(const Gregorian g) { return g.minute(); }
+	inline minute_t minute(const Gregorian g) { return g.minute(); }
 
-	second_t second(const Gregorian g) { return g.second(); }
+	inline second_t second(const Gregorian g) { return g.second(); }
 
 } // end-of-namespace khronos

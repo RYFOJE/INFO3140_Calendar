@@ -6,6 +6,7 @@
 	*/
 
 #include <khronos/gregorian_calendar.hpp>
+#include <iomanip>
 
 
 namespace khronos {
@@ -49,6 +50,40 @@ namespace khronos {
 		hour_t hour, minute_t minute, second_t second) :
 		year_(year), month_(month), day_(day), 
 		hour_(hour), minute_(minute), second_(second) {}
+
+
+	std::string Gregorian::to_string() const
+	{
+		using namespace civil;
+		std::stringstream ss;
+
+		ss << day_name(day_of_week(*this)) << ", ";
+		ss << month_name_long(month_) << " ";
+		ss << day_ << " ";
+		
+
+		// TODO Find a better way of implementing this
+		std::string commonEraNotation = (year_ > 0) ? "CE" : "BCE";
+		year_t adjustedYear = (year_ > 0) ? year_ : -year_ + 1; // Can use abs instead but its faster doing it this way as we already need to do a comparaison
+
+		ss << adjustedYear << " ";
+		ss << commonEraNotation << ", ";
+
+
+		hour_t formattedHour = (hour_ % 12);
+		formattedHour = (formattedHour == 0) ? 12 : formattedHour;
+		ss << formattedHour << ":";
+		ss << std::setfill('0') << std::setw(2) << minute_ << ":";
+		ss << std::setfill('0') << std::setw(2) << second_ << " ";
+		
+		std::string meridiem = (hour_ < 12) ? "am" : "pm";
+
+		ss << meridiem;
+
+		return ss.str();
+	}
+
+
 
 	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs) {
 
