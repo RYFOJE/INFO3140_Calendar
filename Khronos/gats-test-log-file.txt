@@ -42,7 +42,7 @@
   3.0	3.0	ut042_test_Julian_month_name
   2.0	2.0	ut043_test_Julian_to_jd
   2.0	2.0	ut044_jdn_to_julian_test
-  0.0	1.0	ut045_test_julian_full
+  1.0	1.0	ut045_test_julian_full
   0.0	0.3	ut046_test_Julian_ctor_default
   0.0	0.3	ut047_test_Julian_ctor_literal
   0.0	0.3	ut048_test_Julian_ctor_from_Jd
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 68.0 of 100.0 (68.0%)
+Score = 69.0 of 100.0 (69.0%)

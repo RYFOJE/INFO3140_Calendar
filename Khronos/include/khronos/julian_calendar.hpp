@@ -90,4 +90,60 @@ namespace khronos {
 
 	}
 	
+
+	// JULIAN CLASS
+
+	class Julian {
+
+		year_t year_ = 0;
+		month_t month_ = 0;
+		day_t day_ = 0;
+
+		hour_t hour_ = 0;
+		minute_t minute_ = 0;
+		second_t second_ = 0;
+
+	public:
+		
+		Julian(now_t isCurrTime = WTIMEOFDAY);
+		Julian(jd_t jd);
+		Julian(Jd jd);
+		Julian(year_t year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
+		
+		Julian(year_t year, month_t month, day_t day,
+			hour_t hour, minute_t minute, second_t second) :
+			year_(year), month_(month), day_(day), hour_(hour), minute_(minute), second_(second) {};
+		
+		operator Jd() const;
+
+
+		// GETTERS
+
+				/*! Get the year.
+		\return Astronomical year. */
+		constexpr year_t  year() const { return year_; }
+
+		/*! Get the month.
+			\return Month number [1..12] */
+		constexpr month_t month() const { return month_; }
+
+		/*! Get the day of the month.
+			\return Day of month number [1..31]. */
+		constexpr day_t day() const { return day_; };
+
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr hour_t hour() const { return hour_; };
+
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr minute_t minute() const { return minute_; };
+
+		/*! Get the hour
+			\return hour [0 - 23]. */
+		constexpr second_t second() const { return second_; };
+
+		
+	};
+
 }
