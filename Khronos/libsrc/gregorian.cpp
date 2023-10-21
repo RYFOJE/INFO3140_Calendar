@@ -79,7 +79,7 @@ namespace khronos {
 
 		year_t year = lhs.year() - rhs.count / 12;
 		month_t month = lhs.month() - rhs.count % 12;
-		int adjust = (month - 1) / 12 + (month - 12) / 12;
+		int adjust = (month - 1) / 12 - (month - 12) / 12;
 		year -= adjust;
 		month += adjust * 12;
 		day_t day = std::min(lhs.day(), gregorian_days_in_month(month, is_gregorian_leapyear(year)));
