@@ -142,7 +142,9 @@ namespace khronos {
 		 * @param second	Seconds of the Gregorian Object
 		*/
 		Gregorian(year_t year, month_t month, day_t day,
-			hour_t hour, minute_t minute, second_t second);
+			hour_t hour, minute_t minute, second_t second) :
+			year_(year), month_(month), day_(day),
+			hour_(hour), minute_(minute), second_(second) {};
 
 		/*! Get the year.
 		\return Astronomical year. */

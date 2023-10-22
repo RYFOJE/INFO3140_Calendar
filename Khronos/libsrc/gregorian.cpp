@@ -44,11 +44,6 @@ namespace khronos {
 
 	}
 
-	Gregorian::Gregorian(year_t year, month_t month, day_t day,
-		hour_t hour, minute_t minute, second_t second) :
-		year_(year), month_(month), day_(day), 
-		hour_(hour), minute_(minute), second_(second) {}
-
 
 	std::string Gregorian::to_string() const
 	{
