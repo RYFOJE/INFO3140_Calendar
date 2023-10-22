@@ -16,13 +16,7 @@ namespace khronos {
 	}
 
 	Gregorian::Gregorian(jd_t jd) {
-		year_t year;
-		month_t month;
-		day_t day;
-
-		jd_to_gregorian(jd, year, month, day);
-
-		*this = Gregorian(year, month, day);
+		jd_to_gregorian(jd, year_, month_, day_, hour_, minute_, second_);
 
 	}
 
