@@ -146,7 +146,7 @@ namespace khronos {
 	// ====================
 	
 	// OPERATORS
-	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
+	//jd_t operator - (Gregorian const& lhs, Gregorian const& rhs);
 
 	Gregorian operator + (Gregorian const& lhs, months const& rhs);
 
@@ -165,7 +165,6 @@ namespace khronos {
 	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth, hour_t hours, minute_t minutes, second_t seconds);
 	
 	jd_t gregorian_to_jd(const Gregorian g);
-
 	
 	civil_weekday_codes_long day_of_week(const Gregorian g);
 
