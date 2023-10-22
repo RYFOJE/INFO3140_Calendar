@@ -47,49 +47,15 @@ namespace khronos {
 		return civil::month_name_short(month);
 	}
 	
-	constexpr jd_t julian_to_jd(year_t year, month_t month, day_t day) {
+	jd_t julian_to_jd(year_t year, month_t month, day_t day);
 
-		long long a = (14 - month) / 12;
-		long long y = year + 4800 - a;
-		long long m = month + 12 * a - 3;
+	jd_t julian_to_jd(year_t year, month_t month, day_t day,
+		hour_t hour, minute_t minute, second_t second);
 
-		return day + (153 * m + 2) / 5 +
-			365 * y + y / 4 - 32083.5;
-	}
-
-	constexpr jd_t julian_to_jd(year_t year, month_t month, day_t day,
-		hour_t hour, minute_t minute, second_t second) {
-
-		tod_t tod = time_of_day(hour, minute, second);
-
-		return julian_to_jd(year, month, day) + tod;
-
-	}
-
-	inline void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day) {
-
-		long long a = static_cast<long long>(floor(jd + 0.5));
-		long long b = a + 1524;
-		long long c = static_cast<long long>(floor((b - 122.1) / 365.25));
-		long long d = static_cast<long long>(floor(365.25 * c));
-		long long e = static_cast<long long>(floor((b - d) / 30.6001));
-		
-		month = static_cast<month_t>(floor(e < 14 ? e - 1 : e - 13));
-		year = static_cast<year_t>(floor(month > 2 ? c - 4716 : c - 4715));
-		day = static_cast<day_t>(b - d - floor(30.6001 * e));
-		
-	}
+	void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day);
 	
-	inline void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day,
-		hour_t& hour, minute_t& minute, second_t& second) {
-
-		jd_to_julian(jd, year, month, day);
-
-		tod_t tod = jd - floor(jd + 0.5);
-
-		tod_to_hms(tod, hour, minute, second);
-
-	}
+	void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day,
+		hour_t& hour, minute_t& minute, second_t& second);
 	
 
 	// JULIAN CLASS
