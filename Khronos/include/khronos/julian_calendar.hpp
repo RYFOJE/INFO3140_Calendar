@@ -10,6 +10,7 @@
 #include <khronos/def.hpp>
 #include <khronos/calendar.hpp>
 #include <khronos/julian_day.hpp>
+#include <khronos/gregorian_calendar.hpp>
 
 namespace khronos {
 
@@ -116,6 +117,8 @@ namespace khronos {
 		
 		operator Jd() const;
 
+		operator Gregorian() const;
+
 
 		// GETTERS
 
@@ -143,7 +146,20 @@ namespace khronos {
 			\return hour [0 - 23]. */
 		constexpr second_t second() const { return second_; };
 
+		std::string to_string() const;
 		
 	};
+
+	// OPERATORS
+
+	Julian operator + (Julian const& jul, months const& month);
+
+	Julian operator - (Julian const& jul, months const& month);
+
+	Julian operator + (Julian const& jul, years const& years);
+
+	Julian operator - (Julian const& jul, years const& years);
+
+	std::ostream& operator << (std::ostream& os, Julian const& gregorian);
 
 }

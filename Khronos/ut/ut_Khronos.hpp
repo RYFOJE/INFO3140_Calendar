@@ -77,22 +77,22 @@
 #define PHASE_45 false	// TODO Enable this when handing in
 #define PHASE_46 true
 #define PHASE_47 true
-#define PHASE_48 false
-#define PHASE_49 false
+#define PHASE_48 true
+#define PHASE_49 true
 
-#define PHASE_50 false
-#define PHASE_51 false
-#define PHASE_52 false
-#define PHASE_53 false
-#define PHASE_54 false
-#define PHASE_55 false
-#define PHASE_56 false
-#define PHASE_57 false
-#define PHASE_58 false
-#define PHASE_59 false
+#define PHASE_50 true
+#define PHASE_51 true
+#define PHASE_52 true
+#define PHASE_53 true
+#define PHASE_54 true
+#define PHASE_55 true
+#define PHASE_56 true
+#define PHASE_57 true
+#define PHASE_58 true
+#define PHASE_59 true
 
-#define PHASE_60 false
-#define PHASE_61 false
+#define PHASE_60 true
+#define PHASE_61 true
 #define PHASE_62 false
 #define PHASE_63 false
 #define PHASE_64 false

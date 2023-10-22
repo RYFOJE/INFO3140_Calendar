@@ -65,7 +65,7 @@ namespace khronos {
 		// TODO Find a better way of implementing this
 		std::string commonEraNotation = (year_ > 0) ? "CE" : "BCE";
 		year_t adjustedYear = (year_ > 0) ? year_ : -year_ + 1; // Can use abs instead but its faster doing it this way as we already need to do a comparaison
-
+		
 		ss << adjustedYear << " ";
 		ss << commonEraNotation << ", ";
 
