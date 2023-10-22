@@ -206,16 +206,16 @@ namespace khronos {
 
 	// ELEMENT FUNCTIONS
 
-	inline year_t year(const Gregorian g) { return g.year(); }
+	year_t year(const Gregorian g);// { return g.year(); }
 	
-	inline month_t month(const Gregorian g) { return g.month(); }
+	month_t month(const Gregorian g);// { return g.month(); }
 
-	inline day_t day(const Gregorian g) { return g.day(); }
+	day_t day(const Gregorian g);// { return g.day(); }
 
-	inline hour_t hour(const Gregorian g) { return g.hour(); }
+	hour_t hour(const Gregorian g);// { return g.hour(); }
 
-	inline minute_t minute(const Gregorian g) { return g.minute(); }
+	minute_t minute(const Gregorian g);// { return g.minute(); }
 
-	inline second_t second(const Gregorian g) { return g.second(); }
+	second_t second(const Gregorian g);// { return g.second(); }
 
 } // end-of-namespace khronos

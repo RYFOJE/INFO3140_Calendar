@@ -24,13 +24,13 @@ namespace khronos {
 		using namespace civil;
 		std::stringstream ss;
 
-		ss << day_name(day_of_week(*this)) << ", ";
+		ss << day_name(day_of_week(julian_to_jd(year_, month_, day_))) << ", ";
 		ss << month_name_long(month_) << " ";
 		ss << day_ << " ";
 
 
 		// TODO Find a better way of implementing this
-		std::string commonEraNotation = (year_ > 0) ? "CE" : "BCE";
+		std::string commonEraNotation = (year_ > 0) ? "AD" : "BC";
 		year_t adjustedYear = (year_ > 0) ? year_ : -year_ + 1; // Can use abs instead but its faster doing it this way as we already need to do a comparaison
 
 		ss << adjustedYear << " ";
@@ -121,5 +121,18 @@ namespace khronos {
 	}
 
 	
+
+
+	year_t year(const Julian j) { return j.year(); }
+
+	month_t month(const Julian j) { return j.month(); }
+
+	day_t day(const Julian j) { return j.day(); }
+
+	hour_t hour(const Julian j) { return j.hour(); }
+
+	minute_t minute(const Julian j) { return j.minute(); }
+
+	second_t second(const Julian j) { return j.second(); }
 	
 }

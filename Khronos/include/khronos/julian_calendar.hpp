@@ -162,4 +162,19 @@ namespace khronos {
 
 	std::ostream& operator << (std::ostream& os, Julian const& gregorian);
 
+
+	// FUNCTIONS
+
+	year_t year(const Julian j);
+
+	month_t month(const Julian j);
+
+	day_t day(const Julian j);
+
+	hour_t hour(const Julian j);
+	
+	minute_t minute(const Julian j);
+
+	second_t second(const Julian j);
+
 }
