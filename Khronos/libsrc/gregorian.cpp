@@ -11,10 +11,6 @@
 
 namespace khronos {
 
-	jd_t gregorian_to_jd(const Gregorian g) {
-		return gregorian_to_jd(g.year(), g.month(), g.day(), g.hour(), g.minute(), g.second());
-	}
-
 	Gregorian::Gregorian(jd_t jd) {
 		jd_to_gregorian(jd, year_, month_, day_, hour_, minute_, second_);
 
@@ -76,6 +72,16 @@ namespace khronos {
 		return ss.str();
 	}
 
+
+	civil_weekday_codes_long day_of_week(const Gregorian g) {
+
+		jd_t jd = gregorian_to_jd(g);
+		return day_of_week(jd);
+	}
+
+	std::ostream& operator << (std::ostream& os, Gregorian const& gregorian) {
+		return os << gregorian.to_string();
+	}
 
 
 	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs) {
