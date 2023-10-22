@@ -11,6 +11,10 @@
 
 namespace khronos {
 
+	jd_t gregorian_to_jd(const Gregorian g) {
+		return gregorian_to_jd(g.year(), g.month(), g.day());
+	}
+
 	Gregorian::Gregorian(jd_t jd) {
 		year_t year;
 		month_t month;
@@ -18,7 +22,7 @@ namespace khronos {
 
 		jd_to_gregorian(jd, year, month, day);
 
-		Gregorian(year, month, day);
+		*this = Gregorian(year, month, day);
 
 	}
 

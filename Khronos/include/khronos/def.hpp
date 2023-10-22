@@ -16,6 +16,7 @@ namespace khronos {
 	using hour_t = int;
 
 	using tod_t = double;
+	using jd_t = double;
 
 	using day_t = int;
 	using month_t = int;
@@ -26,6 +27,7 @@ namespace khronos {
 
 	// VALUES
 	constexpr double EARTH_ORBITAL_PERIOD_DAYS = 365.256'363'004;
+	constexpr jd_t GREGORIAN_EPOCH = 173'651.6;
 	constexpr int DAYS_IN_WEEK = 7;
 
 

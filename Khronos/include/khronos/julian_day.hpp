@@ -42,13 +42,6 @@ the program(s) have been supplied.
 
 
 namespace khronos {
-
-	// Type definitions
-	using jd_t = double;
-
-	// VALUES
-	constexpr jd_t GREGORIAN_EPOCH = 173'651.6;
-
 	
 	// FUNCTIONS
 

@@ -189,9 +189,7 @@ namespace khronos {
 
 	// FUNCTIONS
 
-	inline jd_t gregorian_to_jd(const Gregorian g) {
-		return gregorian_to_jd(g.year(), g.month(), g.day());
-	}
+	jd_t gregorian_to_jd(const Gregorian g);
 
 	inline civil_weekday_codes_long day_of_week(const Gregorian g) {
 
