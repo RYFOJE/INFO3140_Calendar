@@ -81,9 +81,7 @@ namespace khronos {
 	// FUNCTIONS ON JD CLASS
 
 	/** stream insertion operator. */
-	inline std::ostream& operator << (std::ostream& os, Jd const& jd) {
-		return os << jd.to_string();
-	}
+	std::ostream& operator << (std::ostream& os, Jd const& jd);
 
 	/** Jd relational operators. */
 	constexpr auto operator <=> (Jd const& lhs, Jd const& rhs) { return lhs.jd() <=> rhs.jd(); }
@@ -125,8 +123,5 @@ namespace khronos {
 	constexpr Jd operator - (Jd const& lhs, years const& rhs) {
 		return Jd(lhs.jd() - rhs.count * EARTH_ORBITAL_PERIOD_DAYS);
 	}
-
-
-
 
 } // end-of-namespace khronos

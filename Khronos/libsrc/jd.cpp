@@ -7,9 +7,9 @@
 
 
 #include <khronos/julian_day.hpp>
+#include <format>
 #include <khronos/gregorian_calendar.hpp>
 #include <khronos/julian_calendar.hpp>
-#include <format>
 
 namespace khronos {
 
@@ -89,6 +89,10 @@ namespace khronos {
 
 	std::string Jd::to_string() const {
 		return "JD " + std::format("{}", jd_);
+	}
+
+	std::ostream& operator << (std::ostream& os, Jd const& jd) {
+		return os << jd.to_string();
 	}
 
 }
