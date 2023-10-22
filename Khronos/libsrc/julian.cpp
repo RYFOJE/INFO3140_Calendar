@@ -15,10 +15,6 @@ namespace khronos {
 		jd_to_julian(jd, year_, month_, day_, hour_, minute_, second_);
 		
 	}
-	
-	Julian::operator Gregorian() const {
-		return Gregorian(julian_to_jd(year_, month_, day_, hour_, minute_, second_));
-	}
 
 	std::string Julian::to_string() const {
 		using namespace civil;
@@ -64,6 +60,16 @@ namespace khronos {
 	}
 	
 
+	Julian operator - (Julian const& lhs, Julian const& rhs) {
+
+		// TODO Find a better way of doing this using a julian to jd function that takes a julian object as a parameter
+		jd_t jd_lhs = julian_to_jd(lhs.year(), lhs.month(), lhs.day(), lhs.hour(), lhs.minute(), lhs.second());
+		jd_t jd_rhs = julian_to_jd(rhs.year(), rhs.month(), rhs.day(), rhs.hour(), rhs.minute(), rhs.second());
+
+		return jd_lhs - jd_rhs;
+
+	}
+	
 	Julian operator + (Julian const& jul, months const& month) {
 
 		year_t y = jul.year() + month.count / 12;
@@ -80,7 +86,6 @@ namespace khronos {
 
 	}
 
-	
 	Julian operator - (Julian const& jul, months const& months) {
 
 		year_t y = jul.year() - months.count / 12;

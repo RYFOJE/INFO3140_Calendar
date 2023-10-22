@@ -60,7 +60,7 @@
   0.3	0.3	ut060_test_Julian_relational
   0.3	0.3	ut061_test_Julian_to_string
   0.3	0.3	ut062_test_Julian_element_functions
-  0.0	0.3	ut063_julian_differences
+  0.3	0.3	ut063_julian_differences
   0.0	1.0	ut064_mixed_differences
   0.0	1.0	ut065_mixed_relational
   0.0	1.0	ut066_assignment_conversion_to_jdn_tests
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 73.3 of 100.0 (73.3%)
+Score = 73.7 of 100.0 (73.7%)

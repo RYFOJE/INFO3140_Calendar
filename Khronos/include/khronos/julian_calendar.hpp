@@ -117,9 +117,6 @@ namespace khronos {
 		
 		operator Jd() const;
 
-		operator Gregorian() const;
-
-
 		// GETTERS
 
 				/*! Get the year.
