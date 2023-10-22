@@ -83,15 +83,6 @@ namespace khronos {
 		return os << gregorian.to_string();
 	}
 
-
-	jd_t operator - (Gregorian const& lhs, Gregorian const& rhs) {
-
-		jd_t jd_lhs = gregorian_to_jd(lhs);
-		jd_t jd_rhs = gregorian_to_jd(rhs);
-
-		return jd_lhs - jd_rhs;
-	}
-
 	Gregorian operator + (Gregorian const& lhs, months const& rhs) {
 
 		year_t year = lhs.year() + rhs.count / 12;
