@@ -47,11 +47,6 @@ namespace khronos {
 
 	jd_t jd_to_jdn(jd_t jd);
 
-	void jd_to_gregorian(jd_t jd, year_t& year, month_t& month, day_t& day);
-
-	void jd_to_gregorian(jd_t jd, year_t& year, month_t& month, day_t& day,
-		hour_t& hours, minute_t& minutes, second_t& seconds);
-
 	civil_weekday_codes_long day_of_week(const jd_t jd);
 	
 

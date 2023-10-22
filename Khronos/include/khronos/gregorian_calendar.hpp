@@ -164,6 +164,13 @@ namespace khronos {
 	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth, hour_t hours, minute_t minutes, second_t seconds);
 	
 	jd_t gregorian_to_jd(const Gregorian g);
+
+	/** Conversion from Julian Date **/
+
+	void jd_to_gregorian(jd_t jd, year_t& year, month_t& month, day_t& day);
+
+	void jd_to_gregorian(jd_t jd, year_t& year, month_t& month, day_t& day,
+		hour_t& hours, minute_t& minutes, second_t& seconds);
 	
 	civil_weekday_codes_long day_of_week(const Gregorian g);
 
