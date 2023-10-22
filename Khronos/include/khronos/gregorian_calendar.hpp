@@ -63,12 +63,6 @@ namespace khronos {
 		return daysInMonth[is_leapyear][month];
 	}
 
-	/** Conversion to Julian Date **/
-
-	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth);
-
-	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth, hour_t hours, minute_t minutes, second_t seconds);
-
 	// CLASSES
 	// --------------------------------------------------------------------------------------
 
@@ -164,8 +158,15 @@ namespace khronos {
 
 	// FUNCTIONS
 
+	/** Conversion to Julian Date **/
+
+	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth);
+
+	jd_t gregorian_to_jd(year_t year, month_t month, day_t dayOfMonth, hour_t hours, minute_t minutes, second_t seconds);
+	
 	jd_t gregorian_to_jd(const Gregorian g);
 
+	
 	civil_weekday_codes_long day_of_week(const Gregorian g);
 
 	std::ostream& operator << (std::ostream& os, Gregorian const& gregorian);
