@@ -11,10 +11,14 @@
 
 namespace khronos {
 
+	bool is_islamic_leapyear(year_t year) {
+
+		return (11 * year + 14) % 30 < 11;
+		
+	}
+	
 	Islamic::Islamic(jd_t jd) {
 
-
-		
 	}
 	
 }
