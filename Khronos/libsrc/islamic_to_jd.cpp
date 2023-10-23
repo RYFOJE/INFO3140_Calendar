@@ -9,11 +9,28 @@
 
 namespace khronos {
 	
-	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day) {
-		// TODO IMPLEMENT THIS FUNCTION
+	jd_t islamic_to_jdn(year_t year, month_t month, day_t day) {
+
+		return day + ceil(29.5 * (month - 1)) + (year - 1) * 354 + floor((3 + 11 * year) / 30) + ISLAMIC_EPOCH - 1;
+
+	}
+	
+	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day) {
+		
+		jd_t jd = islamic_to_jdn(year, month, day);
+
+		return jd;
+		
 	}
 
-	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second) {
-		// TODO IMPLEMENT THIS FUNCTION
+	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day, hour_t& hour, minute_t& minute, second_t& second) {
+		
+		jd_t jd = islamic_to_jdn(year, month, day);
+		tod_t time = tod(hour, minute, second);
+		
+		jd+= (time >= 0.5) ? time - 1 : time;
+		
+		return jd;
+		
 	}
 }

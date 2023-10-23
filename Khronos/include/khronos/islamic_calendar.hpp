@@ -8,15 +8,19 @@
 	*/
 
 #include <khronos/def.hpp>
-#include <khronos/julian_day.hpp>
 #include <khronos/calendar.hpp>
+#include <khronos/timeofday.hpp>
+
+#include <khronos/julian_day.hpp>
 
 
 namespace khronos {
 
-	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day);
+	jd_t islamic_to_jdn(year_t year, month_t month, day_t day);
 
-	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second);
+	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day);
+
+	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day, hour_t& hour, minute_t& minute, second_t& second);
 	
 	bool is_islamic_leapyear(year_t year);
 

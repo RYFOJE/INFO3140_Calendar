@@ -106,6 +106,9 @@ namespace khronos {
 	enum civil_weekday_codes_long { Monday = 0, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
 	enum civil_weekday_codes_short { MON = Monday, TUE, WED, THU, FRI, SAT, SUN };
 
+	enum islamic_months { Muharram = 1, Safar, RabialAwwal, RabiathThani, JumadaIUla, JumadatTania, Rajab,
+		Shaban, Ramadan, Shawwal, DhulQadah, DhuIHijja};
+
 	struct days {
 		double count;
 		days(double dayCount) : count(dayCount) {}
