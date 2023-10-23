@@ -75,6 +75,21 @@ namespace khronos {
 	};
 
 
+	// Add operators
+
+	Islamic operator+(Islamic const& dt, months const& n);
+
+	Islamic operator-(Islamic const& dt, months const& n);
+
+	Islamic operator+(Islamic const& dt, years const& n);
+
+	Islamic operator-(Islamic const& dt, years const& n);
+	
+
+
+
+	// Get values
+
 	year_t year(const Islamic i);
 
 	month_t month(const Islamic i);

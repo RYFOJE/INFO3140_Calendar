@@ -94,10 +94,10 @@ namespace khronos {
 		year_t y = jul.year() - months.count / 12;
 		month_t m = jul.month() - months.count % 12;
 
-		long long adjust = (m - 1) / 12 - (m - 12) / 12;
+		int adjust = (m - 1) / 12 - (m - 12) / 12;
 
 		y -= adjust;
-		m += static_cast<month_t>(adjust * 12);
+		m += adjust * 12;
 
 		day_t d = std::min(jul.day(), gregorian_days_in_month(m, is_julian_leapyear(y)));
 

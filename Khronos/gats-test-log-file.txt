@@ -72,19 +72,19 @@
   0.3	0.3	ut072_test_Islamic_month_name
   2.0	2.0	ut073_test_islamic_to_jd
   2.0	2.0	ut074_test_jd_to_islamic
-  0.0	1.0	ut075_test_islamic_full
+  1.0	1.0	ut075_test_islamic_full
   0.1	0.1	ut076_Islamic_ctor_default
   0.1	0.1	ut077_test_Islamic_ctor_literal
   0.1	0.1	ut078_test_Islamic_ctor_from_Jd
   0.0	0.1	ut079_test_Islamic_cast_to_Jd
-  0.0	0.1	ut080_test_Islamic_assignment_from_Jd
-  0.0	0.1	ut081_test_Islamic_add_days
-  0.0	0.1	ut082_test_Islamic_add_weeks
-  0.0	0.1	ut083_test_Islamic_add_months
-  0.0	0.1	ut084_test_Islamic_add_month_leap
-  0.0	0.1	ut085_test_Islamic_add_years
-  0.0	0.1	ut086_test_Islamic_add_years_leapyear
-  0.0	0.1	ut087_test_Islamic_relational
+  0.1	0.1	ut080_test_Islamic_assignment_from_Jd
+  0.1	0.1	ut081_test_Islamic_add_days
+  0.1	0.1	ut082_test_Islamic_add_weeks
+  0.1	0.1	ut083_test_Islamic_add_months
+  0.1	0.1	ut084_test_Islamic_add_month_leap
+  0.1	0.1	ut085_test_Islamic_add_years
+  0.1	0.1	ut086_test_Islamic_add_years_leapyear
+  0.1	0.1	ut087_test_Islamic_relational
   0.0	0.1	ut088_test_Islamic_to_string
   0.0	1.0	ut089_test_Hebrew_month_name
   0.0	1.0	ut090_test_hebrew_to_jd
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 84.2 of 100.0 (84.2%)
+Score = 85.8 of 100.0 (85.8%)

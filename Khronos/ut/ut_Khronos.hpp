@@ -107,21 +107,21 @@
 #define PHASE_72 true
 #define PHASE_73 true
 #define PHASE_74 true
-#define PHASE_75 false	// TODO Enable this when handing in
+#define PHASE_75 true	// TODO Enable this when handing in
 #define PHASE_76 true
 #define PHASE_77 true
 #define PHASE_78 true
-#define PHASE_79 false
+#define PHASE_79 true
 
-#define PHASE_80 false
-#define PHASE_81 false
-#define PHASE_82 false
-#define PHASE_83 false
-#define PHASE_84 false
-#define PHASE_85 false
-#define PHASE_86 false
-#define PHASE_87 false
-#define PHASE_88 false
+#define PHASE_80 true
+#define PHASE_81 true
+#define PHASE_82 true
+#define PHASE_83 true
+#define PHASE_84 true
+#define PHASE_85 true
+#define PHASE_86 true
+#define PHASE_87 true
+#define PHASE_88 true
 #define PHASE_89 false
 
 #define PHASE_90 false
