@@ -40,7 +40,7 @@ GATS_TEST_CASE(ut064_mixed_differences, MIXED_CALENDAR_GROUP, 1) {
 	Gregorian low(2000);
 	Jd high = Jd(low).jd() + 1;
 	Julian copyLow(low);
-
+	
 	GATS_CHECK(high - low == 1);
 	GATS_CHECK(low - high == -1);
 	GATS_CHECK(low - copyLow == 0);

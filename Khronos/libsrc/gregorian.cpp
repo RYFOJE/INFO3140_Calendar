@@ -130,7 +130,7 @@ namespace khronos {
 	}
 
 	Gregorian::operator Julian() const {
-		return Julian(0.8279);
+		return Julian(gregorian_to_jd(year_, month_, day_, hour_, minute_, second_));
 	}
 	
 

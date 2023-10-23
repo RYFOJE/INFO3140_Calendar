@@ -47,12 +47,7 @@ GATS_TEST_CASE(ut046_test_Julian_ctor_default, JULIAN_CALENDAR_GROUP, oneThird) 
 	Julian const today(NOTIMEOFDAY);
 	struct tm tmLocal;
 	localtime_s(&tmLocal, &utcTime);
-
-	Jd time(WTIMEOFDAY);
-
-	Julian test(time);
 	
-
 	Gregorian localDateTime(
 		year_t(tmLocal.tm_year) + 1900,
 		month_t(tmLocal.tm_mon) + 1,

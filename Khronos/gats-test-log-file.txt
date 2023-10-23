@@ -43,7 +43,7 @@
   2.0	2.0	ut043_test_Julian_to_jd
   2.0	2.0	ut044_jdn_to_julian_test
   0.0	1.0	ut045_test_julian_full
-  0.2	0.3	ut046_test_Julian_ctor_default
+  0.3	0.3	ut046_test_Julian_ctor_default
   0.3	0.3	ut047_test_Julian_ctor_literal
   0.3	0.3	ut048_test_Julian_ctor_from_Jd
   0.3	0.3	ut049_test_Julian_cast_to_Jd
@@ -51,7 +51,7 @@
   0.3	0.3	ut051_test_Julian_add_days
   0.3	0.3	ut052_test_Julian_add_days_with_time
   0.3	0.3	ut053_test_Julian_add_weeks
-  0.0	0.3	ut054_test_Julian_add_weeks_with_time
+  0.3	0.3	ut054_test_Julian_add_weeks_with_time
   0.3	0.3	ut055_test_Julian_add_months
   0.3	0.3	ut056_test_Julian_add_months_w_carry
   0.3	0.3	ut057_test_Julian_add_month_leap
@@ -61,8 +61,8 @@
   0.3	0.3	ut061_test_Julian_to_string
   0.3	0.3	ut062_test_Julian_element_functions
   0.3	0.3	ut063_julian_differences
-  0.5	1.0	ut064_mixed_differences
-  0.7	1.0	ut065_mixed_relational
+  1.0	1.0	ut064_mixed_differences
+  1.0	1.0	ut065_mixed_relational
   1.0	1.0	ut066_assignment_conversion_to_jdn_tests
   1.0	1.0	ut067_assignment_conversion_to_gregorian_tests
   0.0	1.0	ut068_assignment_conversion_to_julian_tests
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 76.7 of 100.0 (76.7%)
+Score = 78.0 of 100.0 (78.0%)
