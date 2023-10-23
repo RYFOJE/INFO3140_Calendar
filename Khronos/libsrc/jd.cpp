@@ -58,4 +58,12 @@ namespace khronos {
 		return os << jd.to_string();
 	}
 
+	//Jd::operator Gregorian() const {
+	//	return Gregorian(jd_);
+	//}
+	//
+	//Jd::operator Julian() const {
+	//	return Julian(jd_);
+	//}
+
 }

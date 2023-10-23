@@ -6,6 +6,8 @@
 	*/
 
 #include <khronos/gregorian_calendar.hpp>
+#include <khronos/julian_calendar.hpp>
+
 #include <iomanip>
 
 
@@ -14,10 +16,6 @@ namespace khronos {
 	Gregorian::Gregorian(jd_t jd) {
 		jd_to_gregorian(jd, year_, month_, day_, hour_, minute_, second_);
 
-	}
-
-	Gregorian::Gregorian(Jd const& jd) {
-		jd_to_gregorian(jd.jd(), year_, month_, day_, hour_, minute_, second_);
 	}
 
 	Gregorian::Gregorian(now_t isCurrTime) {
@@ -110,7 +108,7 @@ namespace khronos {
 	}
 
 	Gregorian operator + (Gregorian const& lhs, years const& rhs) {
-		year_t year = lhs.year() + rhs.count;
+		year_t year = static_cast<year_t>(lhs.year() + rhs.count);
 		month_t month = lhs.month();
 		day_t day = (month == 2 && lhs.day() == 29 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
 		
@@ -118,7 +116,7 @@ namespace khronos {
 	}
 
 	Gregorian operator - (Gregorian const& lhs, years const& rhs) {
-		year_t year = lhs.year() - rhs.count;
+		year_t year = static_cast<year_t>(lhs.year() - rhs.count);
 		month_t month = lhs.month();
 		day_t day = (month == 2 && lhs.day() == 28 && !is_gregorian_leapyear(year)) ? 28 : lhs.day();
 
@@ -129,6 +127,10 @@ namespace khronos {
 		
 		return Jd(gregorian_to_jd(year_, month_, day_, hour_, minute_, second_));
 
+	}
+
+	Gregorian::operator Julian() const {
+		return Julian(0.8279);
 	}
 	
 

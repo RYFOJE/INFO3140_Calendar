@@ -95,10 +95,10 @@
 #define PHASE_61 true
 #define PHASE_62 true
 #define PHASE_63 true
-#define PHASE_64 false
-#define PHASE_65 false
-#define PHASE_66 false
-#define PHASE_67 false
+#define PHASE_64 true
+#define PHASE_65 true
+#define PHASE_66 true
+#define PHASE_67 true
 #define PHASE_68 false
 #define PHASE_69 false
 

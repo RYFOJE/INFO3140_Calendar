@@ -52,6 +52,8 @@ namespace khronos {
 	jd_t julian_to_jd(year_t year, month_t month, day_t day,
 		hour_t hour, minute_t minute, second_t second);
 
+	jd_t julian_to_jd(Julian const& julian);
+
 	void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day);
 	
 	void jd_to_julian(jd_t jd, year_t& year, month_t& month, day_t& day,
@@ -73,8 +75,11 @@ namespace khronos {
 	public:
 		
 		Julian(now_t isCurrTime = WTIMEOFDAY) : Julian(Jd(isCurrTime)) {}
+
 		Julian(jd_t jd);
-		Julian(Jd jd_o) : Julian(jd_o.jd()) {}; // Error happens when calling the constructor here
+		
+		Julian(Jd const& jd_o) : Julian(jd_o.jd()) {};
+
 		Julian(year_t year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
 		
 		Julian(year_t year, month_t month, day_t day,
@@ -82,10 +87,11 @@ namespace khronos {
 			year_(year), month_(month), day_(day), hour_(hour), minute_(minute), second_(second) {};
 		
 		operator Jd() const;
+		operator Gregorian() const;
 
 		// GETTERS
 
-				/*! Get the year.
+		/*! Get the year.
 		\return Astronomical year. */
 		constexpr year_t  year() const { return year_; }
 

@@ -66,6 +66,8 @@ namespace khronos {
 	// CLASSES
 	// --------------------------------------------------------------------------------------
 
+	class Julian;
+
 	/**	Proleptic Gregorian Calendar Date class. */
 
 	class Gregorian {
@@ -83,18 +85,18 @@ namespace khronos {
 		// CONSTRUCTORS
 		
 		/**
-		 * @brief		Constructor that will build a Gregorian Date based on a Julian Date
-		 * @param jd	The Julian date to base the Gregorian object off of
-		*/
-		Gregorian(Jd const& jd);
-		
-		/**
 		 * @brief				Default constructor that will see if it include WTIMEOFDAY or NOTIMEOFDAY
 		 * @param isCurrTime	now_t enum
 		*/
 		Gregorian(now_t isCurrTime = WTIMEOFDAY);
 
 		Gregorian(jd_t jd);
+
+		/**
+		 * @brief		Constructor that will build a Gregorian Date based on a Julian Date
+		 * @param jd	The Julian date to base the Gregorian object off of
+		*/
+		Gregorian(Jd const& jd) : Gregorian(jd.jd()) {};
 
 		Gregorian(year_t year, month_t month, day_t day) :
 			year_(year), month_(month), day_(day) {};
@@ -138,6 +140,7 @@ namespace khronos {
 		constexpr second_t second() const { return second_; };
 
 		operator Jd() const;
+		operator Julian() const;
 
 		std::string to_string() const;
 

@@ -58,8 +58,11 @@ namespace khronos {
 		return Jd(julian_to_jd(year_, month_, day_, hour_, minute_, second_));
 
 	}
-	
 
+	Julian::operator Gregorian() const{
+		return Gregorian(julian_to_jd(*this));
+	}
+	
 	Julian operator - (Julian const& lhs, Julian const& rhs) {
 
 		// TODO Find a better way of doing this using a julian to jd function that takes a julian object as a parameter
@@ -78,7 +81,7 @@ namespace khronos {
 		long long adjust = (m - 1) / 12 + (m - 12) / 12;
 
 		y += adjust;
-		m -= adjust * 12;
+		m -= static_cast<month_t>(adjust * 12);
 
 		day_t d = std::min(jul.day(), gregorian_days_in_month(m, is_julian_leapyear(y)));
 
@@ -94,7 +97,7 @@ namespace khronos {
 		long long adjust = (m - 1) / 12 - (m - 12) / 12;
 
 		y -= adjust;
-		m += +adjust * 12;
+		m += static_cast<month_t>(adjust * 12);
 
 		day_t d = std::min(jul.day(), gregorian_days_in_month(m, is_julian_leapyear(y)));
 
@@ -104,7 +107,7 @@ namespace khronos {
 
 	Julian operator + (Julian const& jul, years const& years) {
 
-		year_t y = jul.year() + years.count;
+		year_t y = static_cast<year_t>(jul.year() + years.count);
 		month_t m = jul.month();
 		day_t d = std::min(jul.day(), gregorian_days_in_month(m, is_julian_leapyear(y)));
 
@@ -113,7 +116,7 @@ namespace khronos {
 
 	Julian operator - (Julian const& jul, years const& years) {
 
-		year_t y = jul.year() - years.count;
+		year_t y = static_cast<year_t>(jul.year() - years.count);
 		month_t m = jul.month();
 		day_t d = std::min(jul.day(), gregorian_days_in_month(m, is_julian_leapyear(y)));
 

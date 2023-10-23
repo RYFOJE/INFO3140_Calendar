@@ -16,7 +16,7 @@ namespace khronos {
 
 		jd_to_julian(jd, year, month, day);
 
-		tod_t tod = jd - floor(jd + 0.5);
+		tod_t tod = utility::mod(jd, 1);
 
 		tod_to_hms(tod, hour, minute, second);
 

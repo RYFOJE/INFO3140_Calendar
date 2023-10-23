@@ -40,7 +40,6 @@ the program(s) have been supplied.
 #include <khronos/calendar.hpp>
 
 
-
 namespace khronos {
 	
 	// FUNCTIONS
@@ -50,12 +49,14 @@ namespace khronos {
 	civil_weekday_codes_long day_of_week(const jd_t jd);
 	
 
-	/** JD CLASS DEFINITION **/
+	//class Julian;
+	//class Gregorian;
 
+	/** JD CLASS DEFINITION **/
 	class Jd {
 
 		jd_t jd_;
-
+		
 	public:
 		Jd();
 		Jd(now_t now);
@@ -63,6 +64,7 @@ namespace khronos {
 		
 		constexpr jd_t jd() const { return jd_; }
 		std::string to_string() const;
+		
 	};
 
 

@@ -27,5 +27,12 @@ namespace khronos {
 		return day + (153 * m + 2) / 5 +
 			365 * y + y / 4 - 32083.5;
 	}
+
+	jd_t julian_to_jd(Julian const& julian) {
+
+		return julian_to_jd(julian.year(), julian.month(), julian.day(), 
+			julian.hour(), julian.minute(), julian.second());
+
+	}
 	
 }
