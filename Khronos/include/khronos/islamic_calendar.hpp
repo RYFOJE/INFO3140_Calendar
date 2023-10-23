@@ -13,6 +13,10 @@
 
 namespace khronos {
 
+	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day);
+
+	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second);
+	
 	bool is_islamic_leapyear(year_t year);
 
 	char const* islamic_month_name(month_t month);

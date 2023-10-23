@@ -13,6 +13,8 @@ namespace khronos {
 
 	Islamic::Islamic(jd_t jd) {
 
+
+		
 	}
 	
 }

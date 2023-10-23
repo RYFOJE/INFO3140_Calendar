@@ -6,3 +6,10 @@
 	*/
 
 #include <khronos/islamic_calendar.hpp>
+
+namespace khronos {
+	
+	void islamic_to_jd(jd_t jd, year_t year, month_t month, day_t day) {
+		// TODO IMPLEMENT THIS FUNCTION
+	}
+}
