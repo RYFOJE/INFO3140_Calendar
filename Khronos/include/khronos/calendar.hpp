@@ -79,6 +79,20 @@ namespace khronos {
 			return names[month];
 		}
 
+		constexpr char const* hebrew_month_name(month_t month) {
+			constexpr char const* names[14] = {
+				"",
+				"Nisan", "Iyyar", "Sivan", "Tammuz",
+				"Av", "Elul", "Tishri", "Heshvan",
+				"Kislev", "Teveth", "Shevat", "Adar", "Veadar" 
+			};
+			
+
+		assert(month > 0);
+		assert(month < 14);
+		return names[month];
+	}
+
 
 
 		/** Get the short name of the civil month.

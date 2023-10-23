@@ -8,6 +8,8 @@
 #include <khronos/islamic_calendar.hpp>
 #include <khronos/def.hpp>
 
+#include <sstream>
+
 
 namespace khronos {
 
@@ -84,6 +86,14 @@ namespace khronos {
 		day_t day = (dt.month() == 12 && dt.day() == 30 && !is_islamic_leapyear(year)) ? 29 : dt.day();
 
 		return Islamic(year, dt.month(), day, dt.hour(), dt.minute(), dt.second());
+
+	}
+
+	std::string Islamic::to_string() const {
+
+		std::stringstream ss;
+
+		return ss.str();
 
 	}
 	

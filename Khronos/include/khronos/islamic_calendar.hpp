@@ -72,6 +72,9 @@ namespace khronos {
 
 		second_t second() const { return second_; }
 
+
+		std::string to_string() const;
+
 	};
 
 

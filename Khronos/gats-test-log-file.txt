@@ -86,7 +86,7 @@
   0.1	0.1	ut086_test_Islamic_add_years_leapyear
   0.1	0.1	ut087_test_Islamic_relational
   0.0	0.1	ut088_test_Islamic_to_string
-  0.0	1.0	ut089_test_Hebrew_month_name
+  1.0	1.0	ut089_test_Hebrew_month_name
   0.0	1.0	ut090_test_hebrew_to_jd
   0.0	1.0	ut091_test_jd_to_hebrew
   0.0	1.0	ut092_test_hebrew_full
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 85.8 of 100.0 (85.8%)
+Score = 86.8 of 100.0 (86.8%)

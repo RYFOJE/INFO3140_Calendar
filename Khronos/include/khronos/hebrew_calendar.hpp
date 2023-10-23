@@ -7,3 +7,10 @@
 	Hebrew calendar class.
 	*/
 
+#include <khronos/def.hpp>
+
+namespace khronos {
+
+	char const* hebrew_month_name(month_t month);
+
+}
