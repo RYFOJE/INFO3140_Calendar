@@ -110,7 +110,7 @@
 #define PHASE_75 false	// TODO Enable this when handing in
 #define PHASE_76 true
 #define PHASE_77 true
-#define PHASE_78 false
+#define PHASE_78 true
 #define PHASE_79 false
 
 #define PHASE_80 false

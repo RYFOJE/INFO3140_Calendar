@@ -75,7 +75,7 @@
   0.0	1.0	ut075_test_islamic_full
   0.1	0.1	ut076_Islamic_ctor_default
   0.1	0.1	ut077_test_Islamic_ctor_literal
-  0.0	0.1	ut078_test_Islamic_ctor_from_Jd
+  0.1	0.1	ut078_test_Islamic_ctor_from_Jd
   0.0	0.1	ut079_test_Islamic_cast_to_Jd
   0.0	0.1	ut080_test_Islamic_assignment_from_Jd
   0.0	0.1	ut081_test_Islamic_add_days

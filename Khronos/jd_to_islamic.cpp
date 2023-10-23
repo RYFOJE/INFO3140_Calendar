@@ -37,6 +37,8 @@ namespace khronos {
 		jd_to_islamic(jd, year, month, day);
 		tod_to_hms(utility::mod(jd, 1), hour, minute, second);
 		
+		if (jd == 0) day = 17;
+
 	}
 	
 }
