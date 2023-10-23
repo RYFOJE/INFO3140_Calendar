@@ -88,7 +88,7 @@ namespace khronos {
 		 * @brief				Default constructor that will see if it include WTIMEOFDAY or NOTIMEOFDAY
 		 * @param isCurrTime	now_t enum
 		*/
-		Gregorian(now_t isCurrTime = WTIMEOFDAY);
+		Gregorian(now_t isCurrTime = WTIMEOFDAY) : Gregorian(Jd(isCurrTime)) {}
 
 		Gregorian(jd_t jd);
 
@@ -96,7 +96,7 @@ namespace khronos {
 		 * @brief		Constructor that will build a Gregorian Date based on a Julian Date
 		 * @param jd	The Julian date to base the Gregorian object off of
 		*/
-		Gregorian(Jd const& jd) : Gregorian(jd.jd()) {};
+		Gregorian(Jd const& jd_o) : Gregorian(jd_o.jd()) {};
 
 		Gregorian(year_t year, month_t month, day_t day) :
 			year_(year), month_(month), day_(day) {};

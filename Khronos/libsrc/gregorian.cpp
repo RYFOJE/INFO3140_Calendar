@@ -18,27 +18,6 @@ namespace khronos {
 
 	}
 
-	Gregorian::Gregorian(now_t isCurrTime) {
-
-		// TODO Remove redundant code from 
-		time_t utcTime = time(NULL);
-		struct tm tmLocal;
-		localtime_s(&tmLocal, &utcTime);
-
-		if (isCurrTime == NOTIMEOFDAY) {
-			// TODO Find better way than using pointer as it will initialize two classes
-			*this = Gregorian(tmLocal.tm_year + 1900, tmLocal.tm_mon + 1, tmLocal.tm_mday);
-		}
-
-		else {
-			// TODO Find better way than using pointer as it will initialize two classes
-			*this = Gregorian(tmLocal.tm_year + 1900, tmLocal.tm_mon + 1,
-				tmLocal.tm_mday, tmLocal.tm_hour, tmLocal.tm_min, tmLocal.tm_sec);
-		}
-
-	}
-
-
 	std::string Gregorian::to_string() const
 	{
 		using namespace civil;
