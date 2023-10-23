@@ -16,9 +16,15 @@ namespace khronos {
 		return (11 * year + 14) % 30 < 11;
 		
 	}
+
+	char const* islamic_month_name(month_t month) {
+		return civil::islamic_month_name(month);
+	}
 	
 	Islamic::Islamic(jd_t jd) {
 
+
+		
 	}
 	
 }

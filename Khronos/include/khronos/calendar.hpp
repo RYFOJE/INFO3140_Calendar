@@ -67,6 +67,18 @@ namespace khronos {
 			return names[month];
 		}
 
+		constexpr char const* islamic_month_name(month_t month) {
+			constexpr char const* names[13] = {
+				"",
+				"Muharram", "Safar", "Rabi'al-Awwal", "Rabi'ath-Thani", "Jumada I-Ula",
+				"Jumada t-Tania", "Rajab", "Sha'ban", "Ramadan", "Shawwal","Dhu I-Qa'da", "Dhu I-Hijja"
+			};
+
+			assert(month > 0);
+			assert(month < 13);
+			return names[month];
+		}
+
 
 
 		/** Get the short name of the civil month.

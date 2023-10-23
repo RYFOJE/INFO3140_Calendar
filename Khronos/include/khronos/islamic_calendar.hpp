@@ -9,6 +9,7 @@
 
 #include <khronos/def.hpp>
 #include <khronos/julian_day.hpp>
+#include <khronos/calendar.hpp>
 
 
 namespace khronos {
