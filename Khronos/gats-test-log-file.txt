@@ -65,7 +65,7 @@
   1.0	1.0	ut065_mixed_relational
   1.0	1.0	ut066_assignment_conversion_to_jdn_tests
   1.0	1.0	ut067_assignment_conversion_to_gregorian_tests
-  0.0	1.0	ut068_assignment_conversion_to_julian_tests
+  1.0	1.0	ut068_assignment_conversion_to_julian_tests
   0.0	1.0	ut069_test_defaults
   0.0	0.3	ut070_test_Islamic_leapyear_test
   0.0	0.3	ut071_test_islamic_leapyear
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 78.0 of 100.0 (78.0%)
+Score = 79.0 of 100.0 (79.0%)

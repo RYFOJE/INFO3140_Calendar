@@ -6,3 +6,13 @@
 	*/
 
 #include <khronos/islamic_calendar.hpp>
+#include <khronos/def.hpp>
+
+
+namespace khronos {
+
+	Islamic::Islamic(jd_t jd) {
+
+	}
+	
+}

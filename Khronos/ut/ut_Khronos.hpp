@@ -99,8 +99,8 @@
 #define PHASE_65 true
 #define PHASE_66 true
 #define PHASE_67 true
-#define PHASE_68 false
-#define PHASE_69 false
+#define PHASE_68 true
+#define PHASE_69 false	// TODO Enable this when implementing other calendars
 
 #define PHASE_70 false
 #define PHASE_71 false
