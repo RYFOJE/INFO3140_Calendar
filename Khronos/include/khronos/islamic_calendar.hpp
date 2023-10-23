@@ -58,6 +58,20 @@ namespace khronos {
 		
 		operator Jd() const;
 
+
+		
+		year_t year() const { return year_; }
+		
+		month_t month() const { return month_; }
+
+		day_t day() const { return day_; }
+
+		hour_t hour() const { return hour_; }
+
+		minute_t minute() const { return minute_; }
+
+		second_t second() const { return second_; }
+
 	};
 
 
