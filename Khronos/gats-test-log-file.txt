@@ -71,7 +71,7 @@
   0.3	0.3	ut071_test_islamic_leapyear
   0.3	0.3	ut072_test_Islamic_month_name
   2.0	2.0	ut073_test_islamic_to_jd
-  0.0	2.0	ut074_test_jd_to_islamic
+  2.0	2.0	ut074_test_jd_to_islamic
   0.0	1.0	ut075_test_islamic_full
   0.0	0.1	ut076_Islamic_ctor_default
   0.0	0.1	ut077_test_Islamic_ctor_literal
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 82.0 of 100.0 (82.0%)
+Score = 84.0 of 100.0 (84.0%)

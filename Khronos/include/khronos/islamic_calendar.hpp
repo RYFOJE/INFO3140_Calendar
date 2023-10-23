@@ -18,17 +18,21 @@ namespace khronos {
 
 	jd_t islamic_to_jdn(year_t year, month_t month, day_t day);
 
-	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day);
+	jd_t islamic_to_jd(year_t year, month_t month, day_t day);
 
-	jd_t islamic_to_jd(year_t& year, month_t& month, day_t& day, hour_t& hour, minute_t& minute, second_t& second);
+	jd_t islamic_to_jd(year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second);
+	
+	void jd_to_islamic(jd_t jd, year_t& year, month_t& month, day_t& day);
+
+	void jd_to_islamic(jd_t jd, year_t& year, month_t& month, day_t& day, hour_t& hour, minute_t& minute, second_t& second);
+	
+	
 	
 	bool is_islamic_leapyear(year_t year);
 
 	char const* islamic_month_name(month_t month);
 
 	
-
-
 	class Islamic {
 
 		year_t year_;
@@ -52,7 +56,7 @@ namespace khronos {
 		Islamic(year_t year, month_t month, day_t day, hour_t hour, minute_t minute, second_t second) :
 			year_(year), month_(month), day_(day), hour_(hour), minute_(minute), second_(second) {}
 		
-		
+		operator Jd() const;
 
 	};
 

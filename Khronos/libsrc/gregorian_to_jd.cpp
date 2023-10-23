@@ -37,7 +37,7 @@ namespace khronos {
 		long long m = month + 12 * a - 3;
 		jd_t jd = dayOfMonth + (153 * m + 2) / 5 + 365 * y + y / 4 - y / 100 + y / 400 - 32045 - 0.5;
 
-		jd += time_of_day(hours, minutes, seconds);
+		jd += tod(hours, minutes, seconds);
 
 		return jd;
 	}

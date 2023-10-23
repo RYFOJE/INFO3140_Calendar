@@ -12,9 +12,9 @@ namespace khronos {
 	jd_t julian_to_jd(year_t year, month_t month, day_t day,
 		hour_t hour, minute_t minute, second_t second) {
 
-		tod_t tod = time_of_day(hour, minute, second);
+		tod_t time = tod(hour, minute, second);
 
-		return julian_to_jd(year, month, day) + tod;
+		return julian_to_jd(year, month, day) + time;
 
 	}
 	
