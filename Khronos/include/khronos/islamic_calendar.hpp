@@ -35,13 +35,13 @@ namespace khronos {
 	
 	class Islamic {
 
-		year_t year_;
-		month_t month_;
-		day_t day_;
+		year_t year_ = 0;
+		month_t month_ = 0;
+		day_t day_ = 0;
 
-		hour_t hour_;
-		minute_t minute_;
-		second_t second_;
+		hour_t hour_ = 0;
+		minute_t minute_ = 0;
+		second_t second_ = 0;
 
 	public:
 

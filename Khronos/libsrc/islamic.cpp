@@ -23,10 +23,14 @@ namespace khronos {
 	
 	Islamic::Islamic(jd_t jd) {
 
-		//jd_to_islamic(jd, year_ month_, day_, hour_, minute_, second_);
-		
+		jd_to_islamic(jd, year_, month_, day_, hour_, minute_, second_);
+
 	}
 
-	
+	Islamic::operator Jd() const {
+		
+		return Jd(islamic_to_jd(year_, month_, day_, hour_, minute_, second_));
+		
+	}
 	
 }
