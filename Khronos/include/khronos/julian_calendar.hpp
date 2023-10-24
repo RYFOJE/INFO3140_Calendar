@@ -74,19 +74,53 @@ namespace khronos {
 
 	public:
 		
+		/**
+		 * @brief 0 Arg or 1 Arg constructor that initializes to the current date and time if specified (or no arguments given).
+		 * @param isCurrTime 0 or 1 arg that defaults to WTIME Specifying if the Julian date contains the time
+		*/
 		Julian(now_t isCurrTime = WTIMEOFDAY) : Julian(Jd(isCurrTime)) {}
 
+		/**
+		 * @brief 1 Arg constructor that initializes to the given Julian date.
+		 * @param jd Julian date to initialize to
+		*/
 		Julian(jd_t jd);
 		
+		/**
+		 * @brief 1 Arg constructor that initializes to the given Julian date Object.
+		 * @param jd_o 
+		*/
 		Julian(Jd const& jd_o) : Julian(jd_o.jd()) {};
 
+		/**
+		 * @brief 3 Arg constructor that initializes to a given date.
+		 * @param year  Astronomical year
+		 * @param month  Month number [1..12]
+		 * @param day Day of month number [1..31]
+		*/
 		Julian(year_t year, month_t month, day_t day) : year_(year), month_(month), day_(day) {};
 		
+		/**
+		 * @brief 6 Arg constructor that initializes to a given date and time.
+		 * @param year Astronomical year
+		 * @param month Month number [1..12]
+		 * @param day Day of month number [1..31]
+		 * @param hour Hour of the day [0..23]
+		 * @param minute Minute of the hour [0..59]
+		 * @param second Seconds of the minute [0..59] of type double
+		*/
 		Julian(year_t year, month_t month, day_t day,
 			hour_t hour, minute_t minute, second_t second) :
 			year_(year), month_(month), day_(day), hour_(hour), minute_(minute), second_(second) {};
 		
+		/**
+		 * @brief User defined literal that converts a Julian date to a Julian object.
+		*/
 		operator Jd() const;
+		
+		/**
+		 * @brief User defined literal that converts a Julian date to a Gregorian object.
+		*/
 		operator Gregorian() const;
 
 		// GETTERS
