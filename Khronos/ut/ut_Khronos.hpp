@@ -36,7 +36,7 @@
 
 #define PHASE_9 true
 
-#define PHASE_10 false // TODO turn back on to fully fix later
+#define PHASE_10 true // TODO turn back on to fully fix later
 #define PHASE_11 true
 #define PHASE_12 true
 #define PHASE_13 true
@@ -74,7 +74,7 @@
 #define PHASE_42 true
 #define PHASE_43 true
 #define PHASE_44 true
-#define PHASE_45 false	// TODO Enable this when handing in
+#define PHASE_45 true	// TODO Enable this when handing in
 #define PHASE_46 true
 #define PHASE_47 true
 #define PHASE_48 true
@@ -100,7 +100,7 @@
 #define PHASE_66 true
 #define PHASE_67 true
 #define PHASE_68 true
-#define PHASE_69 false	// TODO Enable this when implementing other calendars
+#define PHASE_69 true	// TODO Enable this when implementing other calendars
 
 #define PHASE_70 true
 #define PHASE_71 true
@@ -125,7 +125,7 @@
 #define PHASE_89 true 
 
 #define PHASE_90 true
-#define PHASE_91 false
+#define PHASE_91 true
 #define PHASE_92 false
 #define PHASE_93 false
 #define PHASE_94 false

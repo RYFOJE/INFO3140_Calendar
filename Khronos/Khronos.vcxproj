@@ -45,6 +45,7 @@
     <ClCompile Include="..\gatslib\_src\win32\ConsoleCore.cpp" />
     <ClCompile Include="..\gatslib\_src\win32\ConsoleEnhanced.cpp" />
     <ClCompile Include="..\gatslib\_src\win32\XError.cpp" />
+    <ClCompile Include="jd_to_hebrew.cpp" />
     <ClCompile Include="jd_to_islamic.cpp" />
     <ClCompile Include="jd_to_julian.cpp" />
     <ClCompile Include="libsrc\gregorian.cpp" />

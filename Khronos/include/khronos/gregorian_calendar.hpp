@@ -18,6 +18,7 @@ Khronos library 'Gregorian calendar' declarations.
 
 
 namespace khronos {
+	
 	// LITERALS
 	/* UDL - converts a Gregorian year CE to an astronomical Gregorian year. */
 	constexpr year_t operator "" _CE(unsigned long long year) {

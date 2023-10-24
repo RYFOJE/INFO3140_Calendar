@@ -218,6 +218,9 @@
     <ClCompile Include="jd_to_islamic.cpp">
       <Filter>Source Files\khronos</Filter>
     </ClCompile>
+    <ClCompile Include="jd_to_hebrew.cpp">
+      <Filter>Source Files\khronos</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

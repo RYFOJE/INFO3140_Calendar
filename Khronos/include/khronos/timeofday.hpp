@@ -39,6 +39,10 @@ namespace khronos {
 		return (seconds + 60 * (minutes + 60 * hours)) / SECONDS_PER_DAY;
 	}
 
+	constexpr tod_t tod_middle(hour_t hours, minute_t minutes, second_t seconds) {
+		return -1 + tod(hours, minutes, seconds);
+	}
+
 	/**	Convert Time-of-day (TOD) to hours, minutes, seconds.  Civil days run from midnight to midnight.
 		@param tod [in] a time-of-day [0..1)
 		@param hours [out] 0-23

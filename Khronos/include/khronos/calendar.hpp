@@ -123,6 +123,8 @@ namespace khronos {
 	enum islamic_months { Muharram = 1, Safar, RabialAwwal, RabiathThani, JumadaIUla, JumadatTania, Rajab,
 		Shaban, Ramadan, Shawwal, DhulQadah, DhulHijja};
 
+	enum hebrew_months { Nisan = 1, Iyyar, Sivan, Tammuz, Av, Elul, Tishri, Heshvan, Kislev, Teveth, Shevat, Adar, Veadar };
+
 	struct days {
 		double count;
 		days(double dayCount) : count(dayCount) {}

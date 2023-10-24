@@ -29,6 +29,7 @@ namespace khronos {
 	constexpr double EARTH_ORBITAL_PERIOD_DAYS = 365.256'363'004;
 	constexpr jd_t GREGORIAN_EPOCH = 173'651.6;
 	constexpr jd_t ISLAMIC_EPOCH = 1'948'439.5;
+	constexpr jd_t HEBREW_EPOCH = 347'995.5;
 	constexpr int DAYS_IN_WEEK = 7;
 
 

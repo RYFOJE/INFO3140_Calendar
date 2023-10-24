@@ -7,7 +7,7 @@
   3.0	3.0	ut007_gregorian_to_jdn_basic_test
   7.0	7.0	ut008_concept_gregorian_jdn_with_tod_test
   7.0	7.0	ut009_test_jd_to_gregorian
-  0.0	1.0	ut010_test_gregorian_full
+  1.0	1.0	ut010_test_gregorian_full
   1.0	1.0	ut011_Jdn_differences
   1.0	1.0	ut012_test_Jd_ctor_default
   2.0	2.0	ut013_test_Jd_ctor_default_no_time_of_day
@@ -42,7 +42,7 @@
   3.0	3.0	ut042_test_Julian_month_name
   2.0	2.0	ut043_test_Julian_to_jd
   2.0	2.0	ut044_jdn_to_julian_test
-  0.0	1.0	ut045_test_julian_full
+  1.0	1.0	ut045_test_julian_full
   0.3	0.3	ut046_test_Julian_ctor_default
   0.3	0.3	ut047_test_Julian_ctor_literal
   0.3	0.3	ut048_test_Julian_ctor_from_Jd
@@ -66,7 +66,7 @@
   1.0	1.0	ut066_assignment_conversion_to_jdn_tests
   1.0	1.0	ut067_assignment_conversion_to_gregorian_tests
   1.0	1.0	ut068_assignment_conversion_to_julian_tests
-  0.0	1.0	ut069_test_defaults
+  1.0	1.0	ut069_test_defaults
   0.3	0.3	ut070_test_Islamic_leapyear_test
   0.3	0.3	ut071_test_islamic_leapyear
   0.3	0.3	ut072_test_Islamic_month_name
@@ -87,8 +87,8 @@
   0.1	0.1	ut087_test_Islamic_relational
   0.0	0.1	ut088_test_Islamic_to_string
   1.0	1.0	ut089_test_Hebrew_month_name
-  0.0	1.0	ut090_test_hebrew_to_jd
-  0.0	1.0	ut091_test_jd_to_hebrew
+  0.3	1.0	ut090_test_hebrew_to_jd
+  1.0	1.0	ut091_test_jd_to_hebrew
   0.0	1.0	ut092_test_hebrew_full
   0.0	0.1	ut093_test_Hebrew_ctor_default
   0.0	0.1	ut094_test_Hebrew_ctor_literal
@@ -118,4 +118,4 @@
   0.0	0.2	ut118_test_Vulcan_to_string
   0.0	0.2	ut119_test_Vulcan_element_functions
 
-Score = 86.8 of 100.0 (86.8%)
+Score = 91.2 of 100.0 (91.2%)
