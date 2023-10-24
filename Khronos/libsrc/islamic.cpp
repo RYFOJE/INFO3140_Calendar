@@ -70,7 +70,7 @@ namespace khronos {
 
 	Islamic operator+(Islamic const& dt, years const& n) {
 
-		year_t year = dt.year() + n.count;
+		year_t year = static_cast<year_t>(dt.year() + n.count);
 		day_t day = (dt.month() == 12 && dt.day() == 30 && !is_islamic_leapyear(year)) ? 29 : dt.day();
 
 		return Islamic(year, dt.month(), day, dt.hour(), dt.minute(), dt.second());
@@ -78,7 +78,7 @@ namespace khronos {
 
 	Islamic operator-(Islamic const& dt, years const& n) {
 
-		year_t year = dt.year() - n.count;
+		year_t year = static_cast<year_t>(dt.year() - n.count);
 		day_t day = (dt.month() == 12 && dt.day() == 30 && !is_islamic_leapyear(year)) ? 29 : dt.day();
 
 		return Islamic(year, dt.month(), day, dt.hour(), dt.minute(), dt.second());

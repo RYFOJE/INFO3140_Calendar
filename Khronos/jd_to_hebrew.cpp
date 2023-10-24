@@ -14,7 +14,7 @@ namespace khronos {
 
 		jd = floor(jd) + 0.5;
 
-		int count = floor((jd - HEBREW_EPOCH) * 98496.0 / 35975351.0);
+		int count = static_cast<int>(floor((jd - HEBREW_EPOCH) * 98496.0 / 35975351.0));
 
 		year = count - 1;
 		int i = count;
@@ -34,7 +34,7 @@ namespace khronos {
 			month++;
 		}
 		
-		day = floor(jd - hebrew_to_jdn(year, month, 1)) + 1;
+		day = static_cast<day_t>(floor(jd - hebrew_to_jdn(year, month, 1)) + 1);
 		
 
 	}
